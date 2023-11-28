@@ -134,3 +134,11 @@ Visit `http://localhost:8000/livestock/` in your browser to see the data display
 Livestock monitoring devices can send POST requests to `http://yourserver/livestock/` with the data in the request body. Handle this data in the `livestock_api` view to save it in the database.
 
 This is a basic setup, and you may need to adjust it based on your specific requirements. Ensure that your server is properly secured, especially when handling data from external devices.
+
+
+
+
+# For integratiing Database
+
+The database was not starting, so i had to add the table myself with all the individual columns. then only the error got solved and the data started adding.
+Otherwise it was showing error that the column not found
