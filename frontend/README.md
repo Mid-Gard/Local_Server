@@ -1,8 +1,7 @@
-# [Vision UI Free Chakra](https://demos.creative-tim.com/vision-ui-dashboard-chakra) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/vision-ui-dashboard-chakra&text=Check%20Vision%20UI%20Dashboard%20made%20by%20@simmmple_web%20and%20@CreativeTim%20#webdesign%20#dashboard%20#react)
+# [Vision UI Free Chakra]
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/vision-ui-dashboard-chakra.svg?maxAge=2592000)](https://github.com/creativetimofficial/vision-ui-dashboard-chakra/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vision-ui-dashboard-chakra.svg?maxAge=2592000)](https://github.com/creativetimofficial/vision-ui-dashboard-chakra/issues?q=is%3Aissue+is%3Aclosed)
+![Our Design](./Group%207050.png)
 
-![Product Gif](https://i.ibb.co/x8GDNYV/vision-ui-free-chakra.png)
 
 Most trendiest, complex and innovative Free Chakra UI Dashboard Made by [Simmmple](https://simmmple.com?ref=readme-vudchakra) & [Creative Tim](https://creative-tim.com/?ref=readme-vudchakra). Check our latest Free Chakra UI Dashboard.
 
