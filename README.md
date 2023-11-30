@@ -9,6 +9,12 @@ This porject inclues the codes and system configurations for setting up WebApp (
 3. Do not install anything on the PC over the table, which is being used to create the server. If any depency issue happens will need to do everything from scratch, as all the database, webapp and ML model will be deployed on it. Do not use it for testing any other work. Only log in to the GEC ETC standard user. Do not login into the uroot or Root User.
 
 
+## Important Data
+We are using the below online collaboration tools to desing the skeleton and UI of the webApp. Put your suggestions and ideas in the below online workspaces.
+Weirframe (Structure of the website) : [Excalidraw](https://excalidraw.com/#room=f19ff3afd8e416e95810,tv_zFrb4YpiwFHOx7NKKgg)
+UI Design : [Figma](https://www.figma.com/file/STlnToD2u2sJWXNBqOrJNi/BE-Project-WebApp-Design?type=design&node-id=0%3A1&mode=design&t=jV1s5RBNqQeq2uKV-1)
+
+
 
 ## ToDo
 1. Need to create fresh NextJs branch and setup
