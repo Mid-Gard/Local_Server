@@ -1,5 +1,7 @@
 # Local_Server
 
+> This is my first react setup, i have messed up few things in this setup. As i havnt finilized whether to use App routing or Page routing. So the routing is not working. Keeping this branch as a safe checkpoint to revert back.
+
 This porject inclues the codes and system configurations for setting up WebApp (Development will be happening in this repo itself), Database installation and hosting and for ML model deployment. For this we are using the PC from AC lab. The idea is to use a local PC for testing and setup and after sucessful deployment. The same can be replicated onto cloud servers or in docker environment as suitable.
 
 
