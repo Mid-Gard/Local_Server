@@ -23,8 +23,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('livestock/',views.livestock_api, name='livestock')
-    path('livestock/', include('livestock_api.urls'))
+    # path('livestock/',views.livestock_api, name='livestock'),
+    path('livestock/', include('livestock_api.urls')),
+    path('weatherstation/', include('weatherstation.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

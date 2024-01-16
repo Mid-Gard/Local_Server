@@ -1,18 +1,20 @@
+from django.shortcuts import render
+
 from django.views.decorators.csrf import csrf_protect 
 from django.http import JsonResponse
-from .models import LivestockData
+from .models import WeatherData
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
 @csrf_protect 
-def livestock_api(request):
+def weather_api(request):
     if request.method == 'POST':
         data = request.POST.get('livestock_data')
-        LivestockData.objects.create(data=data)
+        WeatherData.objects.create(data=data)
         return JsonResponse({'status': 'Data received successfully'})
     elif request.method == 'GET':
-        data = LivestockData.objects.values()  # Convert QuerySet to a list of dictionaries
+        data = WeatherData.objects.values()  # Convert QuerySet to a list of dictionaries
         return JsonResponse(list(data), safe=False)
 
 
@@ -20,10 +22,13 @@ def livestock_api(request):
 stored_data = None
 
 @csrf_exempt
-def liveStock_get(request):
+def weather_get(request):
     global stored_data
     if request.method == 'POST':
-        received_data = json.loads(request.body)
+        received_data = json.loads(request.body.decode('utf-8'))
+        weather_data = received_data.get('weather_data', {}
+                                         )
+        # received_data = json.loads(request.body)
         print(" \n")
         print("Received data:", received_data)
         print("\n")
@@ -31,16 +36,23 @@ def liveStock_get(request):
         # Store the received data in the global variable
         stored_data = received_data
         
-        livestock_data = json.loads(received_data['livestock_data'])
+        # weather_data = json.loads(received_data['weather_data'])
         
-        print(livestock_data['temperature'])
+        print(weather_data['temperature'])
         
         # Save the data to the database
-        LivestockData.objects.create(
-            id=livestock_data['id'],
-            temperature=livestock_data['temperature'],
-            humidity=livestock_data['humidity'],
-            activity=livestock_data['activity']
+        WeatherData.objects.create(
+            id=weather_data['id'],
+            temperature = weather_data['temperature'],
+            humidity = weather_data['humidity'],
+            Pressure = weather_data['Pressure'],
+            LightLevel = weather_data['LightLevel'],
+            SoilMoisture = weather_data['SoilMoisture'],
+            SoilTemp = weather_data['SoilTemp'],
+            WindSpeed = weather_data['WindSpeed'],
+            WindDirection = weather_data['WindDirection'],
+            RainGuage = weather_data['RainGuage'],
+            Altitude = weather_data['Altitude']
         )
 
         return JsonResponse({'status': 'Data received successfully'})
@@ -49,7 +61,7 @@ def liveStock_get(request):
     
 
 @csrf_exempt
-def liveStock_view(request):
+def weather_view(request):
     global stored_data
     # stored_data = {
     #     "temperature": 36.277134529488265,

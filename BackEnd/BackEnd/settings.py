@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a-1%j)j5^q+amiz$j1e0mz!+9$pwi4$c482o!5akz48e5c$5z+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 APPEND_SLASH = False
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'livestock_api',
+    'weatherstation',
 ]
 
 MIDDLEWARE = [
