@@ -2,3 +2,5 @@
 local_server/
 local_server
 BackEnd/db.sqlite3
+*.pyc
+temp/

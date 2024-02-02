@@ -3,8 +3,8 @@ import json
 import random
 import time
 
-
-url = 'http://192.168.0.160:8000/livestock/livestock_get/'
+# url = 'http://192.168.1.110:8000/livestock/livestock_get/'
+url = 'https://0812-14-139-113-18.ngrok-free.app/livestock/livestock_get/'
 # url = 'http://192.168.0.160:8000/livestock/test_post/'
 # url = 'http://14.139.113.18:8000/livestock/test_post/'
 
@@ -20,10 +20,11 @@ while True:
  
     data = {
         'livestock_data': json.dumps({
-            'id': i,
-            'temperature': random.uniform(20, 40),
-            'humidity': random.uniform(30, 70),
-            'activity': random.choice(['sitting', 'standing', 'walking', 'grazing']),
+            'x': random.uniform(20, 40),
+            'y': random.uniform(30, 70),
+            'z': random.uniform(30, 70),
+            'lat': random.uniform(30, 70),
+            'long': random.uniform(30, 70),
         })
     }
     
