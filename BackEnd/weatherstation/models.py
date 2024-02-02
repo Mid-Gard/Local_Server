@@ -22,7 +22,7 @@ class WeatherData(models.Model):
     # class Meta:
     #     # You can still use the 'using' attribute in Meta, but it works in a different way
     #     # This will be used when running queries for this model
-    #     db_table = 'livestock_api_livestockdata'
+    #     db_table = 'livestock_livestockdata'
 
 
 

@@ -1,3 +1,9 @@
+## Note:
+- I wll need to change the IP addresses in the files like settings.py in BackEnd folder in the CORS_ORIGIN_WHITELIST.
+- Also make sure evey API URL is correct as per the NGROK new assigned URL.
+
+
+
 Sure, let's go through the step-by-step process to set up a Django server on an Ubuntu system, create an API endpoint for livestock data, and display the data on a webpage with continuous updates and auto-scroll.
 
 ### Step 1: Install Django
@@ -138,7 +144,15 @@ This is a basic setup, and you may need to adjust it based on your specific requ
 
 
 
-# For integratiing Database
+
+
+
+
+# Problems i faced
+
+1. Sometimes you will get a problem of `no id in the database`. For this you just have to create a new column in that database from the db viewer application.
+
+2. *For integratiing Database*
 
 The database was not starting, so i had to add the table myself with all the individual columns. then only the error got solved and the data started adding.
 Otherwise it was showing error that the column not found
