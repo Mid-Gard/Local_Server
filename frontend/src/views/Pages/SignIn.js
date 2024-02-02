@@ -39,6 +39,7 @@ import signInImage from "assets/img/signInImage.png";
 import AuthFooter from "components/Footer/AuthFooter";
 import GradientBorder from "components/GradientBorder/GradientBorder";
 
+
 function SignIn() {
   const titleColor = "white";
   const textColor = "gray.400";
