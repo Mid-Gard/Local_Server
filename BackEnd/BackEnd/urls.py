@@ -16,15 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from livestock_api import views
+from livestock import views
 
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('livestock/',views.livestock_api, name='livestock'),
-    path('livestock/', include('livestock_api.urls')),
+    # path('livestock/',views.livestock, name='livestock'),
+    path('livestock/', include('livestock.urls')),
     path('weatherstation/', include('weatherstation.urls'))
 ]
 

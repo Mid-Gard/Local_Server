@@ -4,9 +4,10 @@ from .models import LivestockData
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+import time
 
 @csrf_protect 
-def livestock_api(request):
+def livestock(request):
     if request.method == 'POST':
         data = request.POST.get('livestock_data')
         LivestockData.objects.create(data=data)
@@ -33,14 +34,15 @@ def liveStock_get(request):
         
         livestock_data = json.loads(received_data['livestock_data'])
         
-        print(livestock_data['temperature'])
         
         # Save the data to the database
         LivestockData.objects.create(
-            id=livestock_data['id'],
-            temperature=livestock_data['temperature'],
-            humidity=livestock_data['humidity'],
-            activity=livestock_data['activity']
+            Timestamp = int(time.time()),
+            x=livestock_data['x'],
+            y=livestock_data['y'],
+            z=livestock_data['z'],
+            lat=livestock_data['lat'],
+            long=livestock_data['long']
         )
 
         return JsonResponse({'status': 'Data received successfully'})
@@ -70,7 +72,7 @@ def test_post(request):
     if request.method == 'POST':
         received_data = json.loads(request.body)
         print(" \n")
-        print("Received data:", received_data)
+        print("Received data: ", received_data)
         print("\n")
 
         return JsonResponse({'status': 'Data received successfully'})
