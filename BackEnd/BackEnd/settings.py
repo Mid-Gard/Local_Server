@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'livestock',
     'weatherstation',
+    'AGV_Rover',
 ]
 
 MIDDLEWARE = [
@@ -139,4 +140,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static/images") #base path to which uploade
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'http://192.168.1.101:3000', ]
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'http://192.168.0.160:3000']

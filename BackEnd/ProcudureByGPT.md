@@ -31,7 +31,7 @@ python3 manage.py startapp livestock_api
 ```
 
 ### Step 4: Configure Django Settings
-In `livestock_monitoring/settings.py`, add your app to the `INSTALLED_APPS`:
+In `Backend/settings.py`, add your app to the `INSTALLED_APPS`:
 
 ```python
 INSTALLED_APPS = [
