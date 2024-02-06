@@ -18,52 +18,59 @@ def livestock(request):
 
 
 # Global variable to store received data
-stored_data = None
+global received_data
+received_data = None
 
 @csrf_exempt
 def liveStock_get(request):
-    global stored_data
     if request.method == 'POST':
-        received_data = json.loads(request.body)
-        print(" \n")
-        print("Received data:", received_data)
-        print("\n")
-
-        # Store the received data in the global variable
-        stored_data = received_data
-        
-        livestock_data = json.loads(received_data['livestock_data'])
-        
-        
-        # Save the data to the database
-        LivestockData.objects.create(
-            Timestamp = int(time.time()),
-            x=livestock_data['x'],
-            y=livestock_data['y'],
-            z=livestock_data['z'],
-            lat=livestock_data['lat'],
-            long=livestock_data['long']
-        )
-
-        return JsonResponse({'status': 'Data received successfully'})
+        try:
+            received_data = json.loads(request.body)
+            print("\nReceived data:", received_data)
+            
+            # Check if the 'livestock_data' key exists in the received data
+            if 'livestock_data' in received_data:
+                livestock_data_list = received_data['livestock_data']
+                
+                # Iterate over each data pattern in the list
+                for livestock_data in livestock_data_list:
+                    # Save the data to the database
+                    LivestockData.objects.create(
+                        Timestamp=int(time.time()),
+                        x=livestock_data['x'],
+                        y=livestock_data['y'],
+                        z=livestock_data['z'],
+                        lat=livestock_data['lat'],
+                        long=livestock_data['long']
+                    )
+                
+                return JsonResponse({'status': 'Data received successfully'})
+            else:
+                return JsonResponse({'error': 'No data found in the request'})
+        except Exception as e:
+            return JsonResponse({'error': str(e)})
     else:
         return JsonResponse({'error': 'Invalid request method'})
     
 
 @csrf_exempt
 def liveStock_view(request):
-    global stored_data
-    # stored_data = {
-    #     "temperature": 36.277134529488265,
-    #     "humidity": 50.862129842405324,
-    #     "activity": "walking"
-    # }
+    try:
+        # Retrieve the latest data from the database
+        latest_data = LivestockData.objects.latest('Timestamp')
+        
+        # Create a dictionary with the latest data
+        livestock_data = {
+            'x': latest_data.x,
+            'y': latest_data.y,
+            'z': latest_data.z,
+            'lat': latest_data.lat,
+            'long': latest_data.long
+        }
 
-    # Check if data has been received before
-    if stored_data:
-        # Return the stored data as a JSON response
-        return JsonResponse({'livestock_data': stored_data})
-    else:
+        # Return the latest data as a JSON response
+        return JsonResponse({'livestock_data': livestock_data})
+    except LivestockData.DoesNotExist:
         return JsonResponse({'error': 'No data available'})
 
 

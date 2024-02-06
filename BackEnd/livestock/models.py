@@ -1,4 +1,3 @@
-import time
 from django.db import models
 
 # class LivestockDataManager(models.Manager):
