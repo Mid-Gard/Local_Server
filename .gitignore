@@ -4,3 +4,6 @@ local_server
 BackEnd/db.sqlite3
 *.pyc
 temp/
+frontend/.obsidian/
+/.obsidian
+.obsidian/
