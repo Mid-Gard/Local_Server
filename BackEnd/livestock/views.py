@@ -28,7 +28,18 @@ def liveStock_get(request):
             received_data = json.loads(request.body)
             print("\nReceived data:", received_data)
             
-            # Check if the 'livestock_data' key exists in the received data
+            # To Send only one set of data
+            # livestock_data = json.loads(received_data['livestock_data'])
+            # LivestockData.objects.create(
+            #     timestamp=int(time.time()),
+            #     x=livestock_data['x'],
+            #     y=livestock_data['y'],
+            #     z=livestock_data['z'],
+            #     lat=livestock_data['lat'],
+            #     long=livestock_data['long']
+            # )
+            
+            # To Send 10 sets of data at once                
             if 'livestock_data' in received_data:
                 livestock_data_list = received_data['livestock_data']
                 
@@ -36,7 +47,7 @@ def liveStock_get(request):
                 for livestock_data in livestock_data_list:
                     # Save the data to the database
                     LivestockData.objects.create(
-                        Timestamp=int(time.time()),
+                        timestamp=int(time.time()),
                         x=livestock_data['x'],
                         y=livestock_data['y'],
                         z=livestock_data['z'],
@@ -57,7 +68,7 @@ def liveStock_get(request):
 def liveStock_view(request):
     try:
         # Retrieve the latest data from the database
-        latest_data = LivestockData.objects.latest('Timestamp')
+        latest_data = LivestockData.objects.latest('timestamp')
         
         # Create a dictionary with the latest data
         livestock_data = {

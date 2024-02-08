@@ -6,7 +6,7 @@ from django.db import models
 #         self._db = 'livestock_data_db'
 
 class LivestockData(models.Model):
-    Timestamp = models.IntegerField()
+    timestamp = models.IntegerField()
     x = models.FloatField()
     y = models.FloatField()
     z = models.FloatField()
@@ -20,8 +20,3 @@ class LivestockData(models.Model):
     #     # You can still use the 'using' attribute in Meta, but it works in a different way
     #     # This will be used when running queries for this model
     #     db_table = 'livestock_livestockdata'
-
-
-
-    def __str__(self):
-        return f'{self.timestamp} - {self.data}'
