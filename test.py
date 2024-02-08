@@ -3,7 +3,8 @@ import json
 import random
 import time
 
-url = 'http://192.168.0.160:8000/livestock/livestock_get/'
+# url = 'http://localhost:8000/livestock/livestock_get/'
+url = 'http://192.168.0.186:8000/livestock/livestock_get/'
 # url = 'https://ca5c-14-139-113-18.ngrok-free.app/livestock/livestock_get/'
 # url = ' https://2e05-14-139-113-18.ngrok-free.app/test_post/'
 # url = 'http://14.139.113.18:8000/livestock/test_post/'

@@ -7,3 +7,5 @@ temp/
 frontend/.obsidian/
 /.obsidian
 .obsidian/
+env/
+*.sqlite3

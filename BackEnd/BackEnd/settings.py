@@ -87,10 +87,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
-    'livestock_data_db': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "livestock_data_db.sqlite3",
-    },
     # Add more database configurations as needed
 }
 
@@ -140,4 +136,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static/images") #base path to which uploade
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'http://192.168.0.160:3000']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'http://192.168.0.186:3000']
