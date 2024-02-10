@@ -83,9 +83,11 @@ if __name__ == "__main__":
         print("Press Ctrl-C to terminate while statement")
         pass
 
-But now i am receiving the data in the below format, so the code should detect a line starting with W1 and store the first 10 values of this line in runningTime, temperature, humidity, pressure, soil_moisture, soil_temp, wind_speed, wind_direction, rain_gauge, altitude. The next line starting with W2 should store its 10 values in acc_x, acc_y, acc_z, acc_strength, LightLevel, soundLevel, mag_x, mag_y, mag_z, mag_strength.
-Then all the lines starting with 'L', will have 3 values, which are to be stored in a separate variable livestock_data, similar to weather_data, you can create a separate function for this also like the one parse_weather_data. 
+But now i am receiving the data in the below format :
 
 W1=14409 27.3 47.4462890625 27.544609375 0 27.25 0 ??? 00
 W2=-312 -80 -948 1001 48 67 -63.3 -10.65 21.9 67.822
 L=-3.96 -10.20 -4.12
+
+so the code should detect a line starting with W1 and store the 10 values of this line in the following variables : runningTime, temperature, humidity, pressure, soil_moisture, soil_temp, wind_speed, wind_direction, rain_gauge, altitude. The next line starting with W2 should store its 10 values in acc_x, acc_y, acc_z, acc_strength, LightLevel, soundLevel, mag_x, mag_y, mag_z, mag_strength.
+Then all the lines starting with 'L', will have 3 values which are to be stored in x, y, z. All these values are to be stored in a separate variable livestock_data, similar to weather_data, you can create a separate function for this also like the one parse_weather_data.

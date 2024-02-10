@@ -1,6 +1,6 @@
 from django.views.decorators.csrf import csrf_protect 
 from django.http import JsonResponse
-from .models import AGV_RoverData
+from .models import agvRoverData
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -10,10 +10,10 @@ import time
 def agv(request):
     if request.method == 'POST':
         data = request.POST.get('livestock_data')
-        LivestockData.objects.create(data=data)
+        agvRoverData.objects.create(data=data)
         return JsonResponse({'status': 'Data received successfully'})
     elif request.method == 'GET':
-        data = LivestockData.objects.values()  # Convert QuerySet to a list of dictionaries
+        data = agvRoverData.objects.values()  # Convert QuerySet to a list of dictionaries
         return JsonResponse(list(data), safe=False)
 
 
@@ -22,27 +22,21 @@ global received_data
 received_data = None
 
 @csrf_exempt
-def agv_location(request):
+def loc_post(request):
     if request.method == 'POST':
         try:
             received_data = json.loads(request.body)
             print("\nReceived data:", received_data)
             
-            # Check if the 'livestock_data' key exists in the received data
-            if 'livestock_data' in received_data:
-                livestock_data_list = received_data['livestock_data']
-                
-                # Iterate over each data pattern in the list
-                for livestock_data in livestock_data_list:
-                    # Save the data to the database
-                    LivestockData.objects.create(
-                        Timestamp=int(time.time()),
-                        x=livestock_data['x'],
-                        y=livestock_data['y'],
-                        z=livestock_data['z'],
-                        lat=livestock_data['lat'],
-                        long=livestock_data['long']
-                    )
+            # Check if the 'agvloc_data' key exists in the received data
+            if 'agvloc_data' in received_data:
+                agvloc_data = received_data['agvloc_data']
+                print(agvloc_data)
+                # Save the data to the database
+                agvRoverData.objects.create(
+                    lat=agvloc_data['lat'],
+                    long=agvloc_data['long']
+                )
                 
                 return JsonResponse({'status': 'Data received successfully'})
             else:
@@ -54,24 +48,47 @@ def agv_location(request):
     
 
 @csrf_exempt
-def agv_loc_go(request):
+def loc_go(request):
     try:
         # Retrieve the latest data from the database
-        latest_data = LivestockData.objects.latest('Timestamp')
+        latest_data = agvRoverData.objects.latest('Timestamp')
         
         # Create a dictionary with the latest data
-        livestock_data = {
-            'x': latest_data.x,
-            'y': latest_data.y,
-            'z': latest_data.z,
+        agvloc_data = {
             'lat': latest_data.lat,
             'long': latest_data.long
         }
 
         # Return the latest data as a JSON response
-        return JsonResponse({'livestock_data': livestock_data})
-    except LivestockData.DoesNotExist:
+        return JsonResponse({'agvloc_data': agvloc_data})
+    except agvRoverData.DoesNotExist:
         return JsonResponse({'error': 'No data available'})
+
+
+@csrf_exempt
+def ir_post(request):
+    if request.method == 'POST':
+        try:
+            received_data = json.loads(request.body)
+            print("\nReceived data:", received_data)
+
+        except Exception as e:
+            return JsonResponse({'error': str(e)})
+    else:
+        return JsonResponse({'error': 'Invalid request method'})
+        
+
+@csrf_exempt
+def ir_get(request):
+    if request.method == 'POST':
+        try:
+            received_data = json.loads(request.body)
+            print("\nReceived data:", received_data)
+
+        except Exception as e:
+            return JsonResponse({'error': str(e)})
+    else:
+        return JsonResponse({'error': 'Invalid request method'})
 
 
 @csrf_exempt

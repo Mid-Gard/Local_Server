@@ -158,7 +158,7 @@ The database was not starting, so i had to add the table myself with all the ind
 Otherwise it was showing error that the column not found
 
 ```
-CREATE TABLE "AGV_Rover_agv_roverdata" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "Timestamp" datetime NOT NULL, "lat" real NOT NULL, "lon" real NOT NULL)
+CREATE TABLE "AGV_Rover_agvRoverData" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "Timestamp" datetime NOT NULL, "lat" real NOT NULL, "lon" real NOT NULL)
 ```
 
 ```
