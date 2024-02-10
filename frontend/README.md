@@ -1,4 +1,4 @@
-# [Vision UI Free Chakra]
+# Front End
 
 ![Our Design](./Group%207050.png)
 
@@ -70,11 +70,7 @@ Let us know your thoughts below. And good luck with development!
 
 [View all Pages](https://demos.creative-tim.com/vision-ui-dashboard-chakra?ref=readme-vudchakra).
 
-# Quick start
-
-Quick start options:
-
-- Buy from [Creative Tim](https://www.creative-tim.com/product/vision-ui-dashboard-chakra?ref=readme-vudchakra).
+# How to setup
 
 ## Terminal Commands
 
@@ -202,38 +198,23 @@ vision-dashboard-chakra-free/
     └── routes.js
 ```
 
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
-
-## Resources
+<!-- ## Resources
 
 - [Live Preview](https://demos.creative-tim.com/vision-ui-dashboard-chakra?ref=readme-vudchakra)
 - [Buy Page](https://www.creative-tim.com/product/vision-ui-dashboard-chakra?ref=readme-vudchakra)
 - License Agreement: <https://www.creative-tim.com/license?ref=readme-vudchakra>
 - Documentation is [here](https://demos.creative-tim.com/docs-vision-ui-dashboard-chakra?ref=readme-vudchakra)
 - [Support](https://www.creative-tim.com/contact-us?ref=readme-vudchakra)
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/vision-ui-dashboard-chakra/issues)
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/vision-ui-dashboard-chakra/issues) -->
 
-## Reporting Issues
+<!-- ## Reporting Issues
 
 We use GitHub Issues as the official bug tracker for the Vision UI Dashboard. Here are some advices for our users that want to report an issue:
 
 1. Make sure that you are using the latest version of the Vision UI Dashboard. Check the CHANGELOG from your dashboard on our [CHANGE LOG File](https://github.com/creativetimofficial/vision-ui-dashboard-chakra/blob/main/CHANGELOG.md?ref=readme-vudchakra).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help. -->
 
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-vudchakra) instead of opening an issue.
-
-## Licensing
-
-- Copyright 2022 [Creative Tim](https://www.creative-tim.com?ref=readme-vudchakra)
-
-- Creative Tim [License](https://www.creative-tim.com/license?ref=readme-vudchakra)
 
 ## Useful Links
 
@@ -246,23 +227,3 @@ If you have questions or need help integrating the product please [contact us](h
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-vudchakra) (earn money)
 
 - [More products](https://simmmple.com/?ref=readme-vudchakra) from Simmmple
-
-### Social Media - Creative Tim
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Instagram: <https://www.instagram.com/CreativeTimOfficial>
-
-### Social Media - Simmmple
-
-Twitter: <https://twitter.com/simmmple_web>
-
-Facebook: <https://www.facebook.com/simmmple.web>
-
-Dribbble: <https://dribbble.com/simmmple>
-
-Instagram: <https://www.instagram.com/simmmple.web>
