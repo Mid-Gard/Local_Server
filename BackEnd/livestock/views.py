@@ -21,6 +21,7 @@ def livestock(request):
 global received_data
 received_data = None
 
+
 @csrf_exempt
 def liveStock_get(request):
     if request.method == 'POST':
@@ -28,40 +29,75 @@ def liveStock_get(request):
             received_data = json.loads(request.body)
             print("\nReceived data:", received_data)
             
-            # To Send only one set of data
-            # livestock_data = json.loads(received_data['livestock_data'])
-            # LivestockData.objects.create(
-            #     timestamp=int(time.time()),
-            #     x=livestock_data['x'],
-            #     y=livestock_data['y'],
-            #     z=livestock_data['z'],
-            #     lat=livestock_data['lat'],
-            #     long=livestock_data['long']
-            # )
-            
-            # To Send 10 sets of data at once                
+            # Check if 'livestock_data' exists in the received data
             if 'livestock_data' in received_data:
-                livestock_data_list = received_data['livestock_data']
+                livestock_data = received_data['livestock_data']
                 
-                # Iterate over each data pattern in the list
-                for livestock_data in livestock_data_list:
-                    # Save the data to the database
-                    LivestockData.objects.create(
-                        timestamp=int(time.time()),
-                        x=livestock_data['x'],
-                        y=livestock_data['y'],
-                        z=livestock_data['z'],
-                        lat=livestock_data['lat'],
-                        long=livestock_data['long']
-                    )
-                
+                # Assuming that latitude and longitude are provided in the request
+                LivestockData.objects.create(
+                    timestamp=int(time.time()),
+                    x=livestock_data['x'],
+                    y=livestock_data['y'],
+                    z=livestock_data['z'],
+                    lat=livestock_data.get('lat', 0),  # Use get() to handle missing keys
+                    long=livestock_data.get('long', 0)
+                )
                 return JsonResponse({'status': 'Data received successfully'})
             else:
-                return JsonResponse({'error': 'No data found in the request'})
+                return JsonResponse({'error': 'No livestock_data found in the request'})
+            
         except Exception as e:
             return JsonResponse({'error': str(e)})
     else:
         return JsonResponse({'error': 'Invalid request method'})
+
+
+
+# @csrf_exempt
+# def liveStock_get(request):
+#     if request.method == 'POST':
+#         try:
+#             received_data = json.loads(request.body)
+#             print("\nReceived data:", received_data)
+            
+#             # To Send only one set of data
+#             if 'livestock_data' in received_data:
+#                 livestock_data = json.loads(received_data['livestock_data'])
+#                 LivestockData.objects.create(
+#                     timestamp=int(time.time()),
+#                     x=livestock_data['x'],
+#                     y=livestock_data['y'],
+#                     z=livestock_data['z'],
+#                     lat=livestock_data['lat'],
+#                     long=livestock_data['long']
+#                 )
+#                 return JsonResponse({'status': 'Data received successfully'})
+#             else:
+#                 return JsonResponse({'error': 'No data found in the request'})
+            
+#             # # To Send 10 sets of data at once                
+#             # if 'livestock_data' in received_data:
+#             #     livestock_data_list = received_data['livestock_data']
+                
+#             #     # Iterate over each data pattern in the list
+#             #     for livestock_data in livestock_data_list:
+#             #         # Save the data to the database
+#             #         LivestockData.objects.create(
+#             #             timestamp=int(time.time()),
+#             #             x=livestock_data['x'],
+#             #             y=livestock_data['y'],
+#             #             z=livestock_data['z'],
+#             #             lat=livestock_data['lat'],
+#             #             long=livestock_data['long']
+#             #         )
+                
+#             #     return JsonResponse({'status': 'Data received successfully'})
+#             # else:
+#             #     return JsonResponse({'error': 'No data found in the request'})
+#         except Exception as e:
+#             return JsonResponse({'error': str(e)})
+#     else:
+#         return JsonResponse({'error': 'Invalid request method'})
     
 
 @csrf_exempt
