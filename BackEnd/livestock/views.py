@@ -108,6 +108,7 @@ def liveStock_view(request):
         
         # Create a dictionary with the latest data
         livestock_data = {
+            'timestamp': latest_data.timestamp,
             'x': latest_data.x,
             'y': latest_data.y,
             'z': latest_data.z,
