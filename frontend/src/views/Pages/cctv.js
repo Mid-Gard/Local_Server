@@ -1,3 +1,13 @@
+// chakra imports
+import { Box, ChakraProvider, Portal } from "@chakra-ui/react";
+// import Footer from "components/Footer/Footer.js";
+// core components
+
+import React from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import routes from "routes.js";
+import theme from "theme/themeAuth.js";
+
 /*!
 
 =========================================================
@@ -16,33 +26,15 @@
 
 */
 
-// Chakra imports
-import { ChakraProvider, Portal, useDisclosure } from "@chakra-ui/react";
-import Configurator from "components/Configurator/Configurator";
-import Footer from "components/Footer/Footer.js";
-// Layout components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import React, { useState } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
-import routes from "routes.js";
-// Custom Chakra theme
-import theme from "theme/themeAdmin";
-import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
-// Custom components
-import MainPanel from "../components/Layout/MainPanel";
-import PanelContainer from "../components/Layout/PanelContainer";
-import PanelContent from "../components/Layout/PanelContent";
-export default function Dashboard(props) {
+export default function cctv(props) {
   const { ...rest } = props;
-  // states and functions
-  const [sidebarVariant, setSidebarVariant] = useState("transparent");
-  const [fixed, setFixed] = useState(false);
-  // ref for main panel div
-  const mainPanel = React.createRef();
-  const getRoute = () => {
-    return window.location.pathname !== "/admin/full-screen-maps";
-  };
+  // ref for the wrapper div
+  const wrapper = React.createRef();
+  React.useEffect(() => {
+    document.body.style.overflow = "unset";
+    // Specify how to clean up after this effect:
+    return function cleanup() {};
+  });
   const getActiveRoute = (routes) => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
@@ -66,7 +58,6 @@ export default function Dashboard(props) {
     }
     return activeRoute;
   };
-  // This changes navbar state(fixed or not)
   const getActiveNavbar = (routes) => {
     let activeNavbar = false;
     for (let i = 0; i < routes.length; i++) {
@@ -95,7 +86,7 @@ export default function Dashboard(props) {
       if (prop.category === "account") {
         return getRoutes(prop.views);
       }
-      if (prop.layout === "/rtl" || prop.layout === "/admin") {
+      if (prop.layout === "/auth") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -108,10 +99,27 @@ export default function Dashboard(props) {
       }
     });
   };
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  // Chakra Color Mode
+
+  const navRef = React.useRef();
+  document.documentElement.dir = "ltr";
   return (
-    <ChakraProvider theme={theme} resetCss={false}>
+    <ChakraProvider theme={theme} resetCss={false} w="100%">
+      <Box ref={navRef} w="100%">
+        <Portal containerRef={navRef}>
+          <AuthNavbar
+            secondary={getActiveNavbar(routes)}
+            logoText="VISION UI FREE"
+          />
+        </Portal>
+        <Box w="100%">
+          <Box ref={wrapper} w="100%">
+            <Switch>
+              {getRoutes(routes)}
+              <Redirect from="/auth" to="/auth/login-page" />
+            </Switch>
+          </Box>
+        </Box>
+      </Box>
     </ChakraProvider>
   );
 }

@@ -34,8 +34,6 @@ function TimelineRow(props) {
           h={"20px"}
           w={"20px"}
           me='16px'
-          right={document.documentElement.dir === "rtl" ? "-8px" : ""}
-          left={document.documentElement.dir === "rtl" ? "" : "-8px"}
         />
       </Flex>
       <Flex direction='column' justifyContent='flex-start' h='100%'>

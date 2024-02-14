@@ -80,7 +80,7 @@ function Billing() {
                   w='100%'>
                   <Flex justify='space-between' align='center'>
                     <Text fontSize='md' fontWeight='bold'>
-                      Vision UI
+                      Smart Farm
                     </Text>
                     <Icon
                       as={RiMastercardFill}
@@ -274,7 +274,7 @@ function Billing() {
               align='center'
               mb='1rem'
               w='100%'
-              mb='28px'>
+              b='28px'>
               <Text fontSize='lg' color='#fff' fontWeight='bold'>
                 Invoices
               </Text>
@@ -351,7 +351,6 @@ function Billing() {
                     color='gray.400'
                     w='15px'
                     h='15px'
-                    color='#fff'
                     me='6px'
                   />
                   <Text color='gray.400' fontSize='sm'>

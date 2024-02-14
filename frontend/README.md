@@ -1,6 +1,6 @@
 # Front End
 
-![Our Design](./Group%207050.png)
+Current Design as of now : 
 
 
 Most trendiest, complex and innovative Free Chakra UI Dashboard Made by [Simmmple](https://simmmple.com?ref=readme-vudchakra) & [Creative Tim](https://creative-tim.com/?ref=readme-vudchakra). Check our latest Free Chakra UI Dashboard.

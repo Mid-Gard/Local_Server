@@ -207,11 +207,11 @@ export default function Dashboard() {
 									Welcome back,
 								</Text>
 								<Text fontSize='28px' color='#fff' fontWeight='bold' mb='18px'>
-									Mark Johnson
+									John Wick
 								</Text>
 								<Text fontSize='md' color='gray.400' fontWeight='normal' mb='auto'>
 									Glad to see you again! <br />
-									Ask me anything.
+									See the reports.
 								</Text>
 								<Spacer />
 								<Flex align='center'>

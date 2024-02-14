@@ -116,7 +116,7 @@ export default function Dashboard(props) {
     <ChakraProvider theme={theme} resetCss={false}>
       <Sidebar
         routes={routes}
-        logoText={"VISION UI FREE"}
+        logoText={"Smart Farm"}
         display='none'
         sidebarVariant={sidebarVariant}
         {...rest}
@@ -130,7 +130,7 @@ export default function Dashboard(props) {
         <Portal>
           <AdminNavbar
             onOpen={onOpen}
-            logoText={"VISION UI FREE"}
+            logoText={"Smart Farm"}
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
             fixed={fixed}
@@ -147,7 +147,7 @@ export default function Dashboard(props) {
             </PanelContainer>
           </PanelContent>
         ) : null}
-        <Footer />
+        {/* <Footer /> */}
         <Portal>
           <FixedPlugin
             secondary={getActiveNavbar(routes)}
