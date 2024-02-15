@@ -12,7 +12,7 @@ Otherwise use NGROK to host the server on all internet.
 
 To create the remaining APIs, use the following doc : [Procedure by GPT](./BackEnd/ProcudureByGPT.md)
 
-# Local_Server
+# Local_Server 
 
 This porject inclues the codes and system configurations for setting up WebApp (Development will be happening in this repo itself), Database installation and hosting and for ML model deployment. For this we are using the PC from AC lab. The idea is to use a local PC for testing and setup and after sucessful deployment. The same can be replicated onto cloud servers or in docker environment as suitable.
 
