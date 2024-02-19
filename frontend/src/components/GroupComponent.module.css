@@ -1,0 +1,85 @@
+.backgroundIcon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0.2px;
+  right: 0;
+  bottom: -0.2px;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.iconChild {
+  height: 42.7px;
+  width: 43.2px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--secondary-primary-white);
+  display: none;
+}
+.ioniconhhelpcircle {
+  height: 29.3px;
+  width: 29.6px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.icon {
+  border-radius: var(--br-xs);
+  background-color: var(--secondary-primary-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) var(--padding-7xs) var(--padding-7xs)
+    var(--padding-6xs);
+  z-index: 1;
+}
+.needHelp,
+.pleaseCheckOur {
+  position: relative;
+  text-shadow: 1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000;
+  z-index: 1;
+}
+.needHelp {
+  width: 92.5px;
+  height: 24.4px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.pleaseCheckOur {
+  align-self: stretch;
+  font-size: var(--font-size-xs);
+  line-height: 100%;
+  font-family: var(--font-aldrich);
+}
+.backgroundParent,
+.needHelpParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.needHelpParent {
+  width: 150px;
+  gap: var(--gap-8xs);
+}
+.backgroundParent {
+  align-self: stretch;
+  height: 208px;
+  padding: var(--padding-lgi);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-7xl);
+  z-index: 2;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--secondary-primary-white);
+  font-family: var(--font-abhaya-libre);
+}

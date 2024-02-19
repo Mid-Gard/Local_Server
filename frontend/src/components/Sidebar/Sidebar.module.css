@@ -1,0 +1,587 @@
+.listIcon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0.3px;
+  right: 0;
+  bottom: -0.3px;
+  left: 0;
+  border-radius: var(--br-xl);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.farmManagement {
+  position: relative;
+  letter-spacing: 0.18em;
+  line-height: 100%;
+  background: linear-gradient(97.89deg, #fff, rgba(117, 122, 140, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+
+.farmManagementWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xl);
+  text-align: center;
+}
+
+.sidbarLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.cattleBehaviorIcon {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.dashboard {
+  align-self: stretch;
+  height: 54.2px;
+  z-index: 1;
+  font-size: large;
+}
+
+.iconFrameChild {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: none;
+}
+
+.ioniconsstatschart {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.nav_link{
+  text-decoration: none;
+  font-weight: 100;
+  color: #fff;
+}
+
+.secondCard {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+}
+
+.weather1 {
+  width: 100px;
+  position: absolute;
+  margin: 0 !important;
+  right: -45.6px;
+  bottom: 8.1px;
+  line-height: 100%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.ioniconccarddefault {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+  margin-left: -24px;
+}
+
+.weather {
+  width: 101px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--secondary-primary-white);
+  font-family: var(--font-roboto-flex);
+}
+
+.iconFrame {
+  width: 31px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-6xs) var(--padding-6xs);
+  box-sizing: border-box;
+}
+
+.livestock {
+  width: 100px;
+  position: absolute;
+  margin: 0 !important;
+  right: -45.6px;
+  bottom: 8.1px;
+  line-height: 100%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.tables {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.frameChild {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: none;
+}
+
+.ioniconbbuilddefault {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.rectangleParent {
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-4xs) var(--padding-6xs) var(--padding-5xs);
+  z-index: 1;
+}
+
+.cctv {
+  position: relative;
+  line-height: 100%;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.lines {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+
+.frameItem {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: none;
+}
+
+.ioniconddocumentdefault {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.rectangleGroup {
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) var(--padding-4xs) var(--padding-5xs) var(--padding-5xs);
+  z-index: 1;
+}
+
+.actuators {
+  position: relative;
+  line-height: 100%;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.lines1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+
+.frameInner {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: none;
+}
+
+.ioniconddocumentdefault1 {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.rectangleContainer {
+  width: 31px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) var(--padding-5xs) var(--padding-5xs) var(--padding-6xs);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.agv {
+  position: relative;
+  line-height: 100%;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.lines2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+
+.rectangleDiv {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: none;
+}
+
+.ioniconddocumentdefault2 {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.frameDiv {
+  width: 31px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) var(--padding-5xs) var(--padding-5xs) var(--padding-6xs);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.uav {
+  position: relative;
+  line-height: 100%;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.group,
+.lines3,
+.pageLinks {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.lines3 {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-smi);
+}
+
+.group,
+.pageLinks {
+  align-items: flex-start;
+}
+
+.group {
+  flex: 1;
+  flex-direction: column;
+  padding: 0 var(--padding-12xs) 0 0;
+  gap: var(--gap-4xs);
+}
+
+.pageLinks {
+  width: 205px;
+  flex-direction: row;
+  padding: 0 var(--padding-base);
+  box-sizing: border-box;
+}
+
+.background,
+.totalOnlineProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.totalOnlineProgress {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-6xs);
+  gap: var(--gap-xs);
+}
+
+.background {
+  width: 238px;
+  align-items: center;
+  box-sizing: border-box;
+  gap: var(--gap-4xl);
+  font-size: var(--font-size-sm);
+}
+
+.vector8Stroke {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 3;
+}
+
+.accountPages {
+  position: relative;
+  line-height: 150%;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.analyzeDataFrame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl) var(--padding-6xs);
+}
+
+.pMFrameChild {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: none;
+}
+
+.ioniconppersondefault {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.pMFrame {
+  width: 31px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-5xs) var(--padding-6xs) var(--padding-6xs);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.farmers {
+  position: relative;
+  line-height: 100%;
+  z-index: 1;
+}
+
+.aMFrame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+
+.frameChild1 {
+  height: 30.1px;
+  width: 30.6px;
+  position: relative;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: none;
+}
+
+.ioniconrrocketsharp {
+  height: 15px;
+  width: 15.3px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.rectangleParent1 {
+  width: 31px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray);
+  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-6xs) var(--padding-6xs);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.profile {
+  position: relative;
+  line-height: 100%;
+  z-index: 1;
+}
+
+.aMFrame1,
+.cattleBehaviourFrame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+
+.cattleBehaviourFrame {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rainfallFrame {
+  flex-direction: row;
+  padding: 0 var(--padding-xl) 0 var(--padding-lgi);
+  font-size: var(--font-size-sm);
+}
+
+.frameIcon,
+.livestockOutsideFrame,
+.rainfallFrame,
+.sidebar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.livestockOutsideFrame {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-mid);
+}
+
+.frameIcon,
+.sidebar {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-9xs);
+  margin-block-start: 7rem;
+  font-size: var(--font-size-xs);
+}
+
+.sidebar {
+  flex-direction: column;
+  padding: var(--padding-8xl) var(--padding-8xs) var(--padding-18xl);
+  position: relative;
+  gap: var(--gap-20xl);
+  margin-block-start: 0rem;
+  height: 76vh;
+  z-index: 2;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--secondary-primary-white);
+  font-family: var(--font-roboto-flex);
+}
+
+@media screen and (max-width: 800px) {
+
+  .background,
+  .sidebar {
+    padding-bottom: var(--padding-99xl);
+    box-sizing: border-box;
+  }
+
+  .sidebar {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-5xl);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sidebar {
+    gap: var(--gap-20xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

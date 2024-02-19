@@ -1,0 +1,30 @@
+.background3 {
+    border: 0;
+    background-color: transparent;
+    height: 384.7px;
+    width: auto;
+    outline: 0;
+    align-self: stretch;
+    /* background: linear-gradient(126.97deg,
+            rgba(187, 215, 177, 0.74),
+            rgba(8, 109, 97, 0.71)); */
+    z-index: 4;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    background-color: black;
+    border-radius: 2rem;
+}
+
+.map_container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    outline-style: none;
+    border-radius: 2rem;
+}
