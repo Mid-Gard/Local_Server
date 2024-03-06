@@ -2,7 +2,7 @@
 
 1. Go in the BackEnd folder : ```cd BackEnd```
 2. First activate the environment : ```source /home/uroot/BE_Project/Local_Server/local_server/bin/activate.fish```
-3. Then Run the BackEnd Server : ```python3 manage.py runserver 0.0.0.0:8000```
+3. Then Run the BackEnd Server : ```python manage.py runserver 0.0.0.0:8000```
 > Verify the IP address of this server
 4. Now if you cant make the server visible over the LAN with some frameworks like XAMPP, then fine, you have to put this ip address as the part of the API in the various sub-project components. 
 
