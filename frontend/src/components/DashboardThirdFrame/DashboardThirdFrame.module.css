@@ -95,7 +95,7 @@
   box-sizing: border-box;
 }
 
-.background,
+.CCTVbox,
 .background4 {
   border-radius: var(--br-xl);
   backdrop-filter: blur(120px);
@@ -103,7 +103,7 @@
   z-index: 3;
 }
 
-.background {
+.CCTVbox {
   flex: 1 1;
   background: linear-gradient(126.97deg, rgba(12, 47, 0, 0.74), rgba(0, 65, 57, 0.71));
   display: flex;
@@ -233,14 +233,14 @@
   flex-shrink: 0;
 }
 
-.rainfall,
-.secondCard {
+.DashboardThirdFrame,
+.NotificationBox {
   display: flex;
   justify-content: flex-start;
   max-width: 100%;
 }
 
-.secondCard {
+.NotificationBox {
   width: 401px;
   filter: drop-shadow(0 3.5px 5.5px rgba(0, 0, 0, 0.02));
   flex-direction: column;
@@ -254,7 +254,7 @@
   font-family: var(--font-roboto-flex);
 }
 
-.rainfall {
+.DashboardThirdFrame {
   flex-direction: row;
   display: flex;
   flex-wrap: nowrap;
@@ -272,7 +272,7 @@
     flex-wrap: wrap;
   }
 
-  .background {
+  .CCTVbox {
     min-width: 100%;
   }
 }
@@ -284,7 +284,7 @@
     flex-wrap: wrap;
   }
 
-  .secondCard {
+  .NotificationBox {
     gap: var(--gap-12xl);
   }
 }

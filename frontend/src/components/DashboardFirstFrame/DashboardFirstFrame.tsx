@@ -1,8 +1,8 @@
 import { FunctionComponent } from "react";
 import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
-import styles from "./FrameComponent.module.css";
+import styles from "./DashboardFirstFrame.module.css";
 
-const FrameComponent: FunctionComponent = () => {
+const DashboardFirstFrame: FunctionComponent = () => {
   return (
     <div className={styles.frameParent}>
       <div className={styles.backgroundParent}>
@@ -157,4 +157,4 @@ const FrameComponent: FunctionComponent = () => {
   );
 };
 
-export default FrameComponent;
+export default DashboardFirstFrame;

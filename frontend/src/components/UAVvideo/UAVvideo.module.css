@@ -233,7 +233,7 @@
     flex-shrink: 0;
 }
 
-.rainfall,
+.DashboardThirdFrame,
 .secondCard {
     display: flex;
     justify-content: flex-start;
@@ -254,7 +254,7 @@
     font-family: var(--font-roboto-flex);
 }
 
-.rainfall {
+.DashboardThirdFrame {
     flex-direction: row;
     display: flex;
     flex-wrap: nowrap;

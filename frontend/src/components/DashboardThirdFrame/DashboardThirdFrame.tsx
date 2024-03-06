@@ -7,21 +7,21 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
-import styles from "./Rainfall.module.css";
+import styles from "./DashboardThirdFrame.module.css";
 
 interface cctvCamfeedProps {
   camUrl: string;
 }
 
-function Rainfall({ camUrl }: cctvCamfeedProps) {
+function DashboardThirdFrame({ camUrl }: cctvCamfeedProps) {
   const onViewAllClick = useCallback(() => {
     // Please sync "CCTV Tab" to the project
   }, []);
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className={styles.rainfall}>
-      <div className={styles.background}>
+    <div className={styles.DashboardThirdFrame}>
+      <div className={styles.CCTVbox}>
         <div className={styles.background1}>
           <div className={styles.notifications}>
             <h3 className={styles.cctv}>CCTV</h3>
@@ -42,9 +42,7 @@ function Rainfall({ camUrl }: cctvCamfeedProps) {
           </div>
         </div>
       </div>
-      <div className={styles.background4}>
-      </div>
-      <div className={styles.secondCard}>
+      <div className={styles.NotificationBox}>
         <img className={styles.listIcon} alt="" src="/list.svg" />
         <div className={styles.notifsList}>
           <div className={styles.monthlyNotif}>
@@ -124,4 +122,4 @@ function Rainfall({ camUrl }: cctvCamfeedProps) {
   );
 };
 
-export default Rainfall;
+export default DashboardThirdFrame;

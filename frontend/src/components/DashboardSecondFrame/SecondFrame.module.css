@@ -261,7 +261,7 @@
   display: none;
 }
 
-.rainfallInches {
+.DashboardThirdFrameInches {
   margin: 0;
   height: 16.9px;
   width: 351.2px;
@@ -319,7 +319,7 @@
   text-align: center;
 }
 
-.rainfallInchesFrame,
+.DashboardThirdFrameInchesFrame,
 .viewAllFrame {
   display: flex;
   flex-direction: row;
@@ -333,7 +333,7 @@
   gap: var(--gap-xl);
 }
 
-.rainfallInchesFrame {
+.DashboardThirdFrameInchesFrame {
   align-self: stretch;
   justify-content: flex-start;
   padding: 0 var(--padding-12xl) 0 var(--padding-lg);

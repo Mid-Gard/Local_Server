@@ -520,7 +520,7 @@
   align-items: flex-start;
 }
 
-.rainfallFrame {
+.DashboardThirdFrameFrame {
   flex-direction: row;
   padding: 0 var(--padding-xl) 0 var(--padding-lgi);
   font-size: var(--font-size-sm);
@@ -528,7 +528,7 @@
 
 .frameIcon,
 .livestockOutsideFrame,
-.rainfallFrame,
+.DashboardThirdFrameFrame,
 .sidebar {
   display: flex;
   align-items: flex-start;

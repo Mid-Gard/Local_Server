@@ -150,7 +150,7 @@ const Sidebar: FunctionComponent = () => {
               <div className={styles.analyzeDataFrame}>
                 <div className={styles.accountPages}>ACCOUNT PAGES</div>
               </div>
-              <div className={styles.rainfallFrame}>
+              <div className={styles.DashboardThirdFrameFrame}>
                 <div className={styles.cattleBehaviourFrame}>
                   <div className={styles.aMFrame}>
                     <div className={styles.pMFrame}>

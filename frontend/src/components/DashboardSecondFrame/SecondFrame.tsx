@@ -5,9 +5,9 @@ import styles from "./SecondFrame.module.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import LivestockMap from "./LivestockMap/LivestockMap";
-import DashBoard from "../pages/DashBoard";
-import DashboardLivetock from "./DashboardLivestock/DashboardLivestock"
+import LivestockMap from "../LivestockMap/LivestockMap";
+import DashBoard from "../../pages/DashBoard";
+import DashboardLivetock from "../DashboardLivestock/DashboardLivestock"
 
 // Define the type for location objects
 interface Location {
@@ -65,9 +65,9 @@ const SecondFrame: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.background1}>
-          <div className={styles.rainfallInchesFrame}>
+          <div className={styles.DashboardThirdFrameInchesFrame}>
             <div className={styles.viewAllFrame}>
-              <h3 className={styles.rainfallInches}>Rainfall (inches)</h3>
+              <h3 className={styles.DashboardThirdFrameInches}>DashboardThirdFrame (inches)</h3>
               <div className={styles.icon2} onClick={onIconContainerClick}>
                 <div className={styles.vectorParent}>
                   <img

@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import NeedHelpBox from "../components/NeedHelpBox/NeedHelpBox";
-import FrameComponent from "../components/FrameComponent";
-import SecondFrame from "../components/SecondFrame";
-import Rainfall from "../components/Rainfall";
+import DashboardFirstFrame from "../components/DashboardFirstFrame/DashboardFirstFrame";
+import SecondFrame from "../components/DashboardSecondFrame/SecondFrame";
+import DashboardThirdFrame from "../components/DashboardThirdFrame/DashboardThirdFrame";
 import styles from "./DashBoard.module.css";
 
 const DashBoard: FunctionComponent = () => {
@@ -18,9 +18,9 @@ const DashBoard: FunctionComponent = () => {
           <NeedHelpBox />
         </div>
         <section className={styles.frameParent}>
-          <FrameComponent />
+          <DashboardFirstFrame />
           <SecondFrame />
-          <Rainfall camUrl={camUrl} />
+          <DashboardThirdFrame camUrl={camUrl} />
         </section>
       </main>
     </div>
