@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'livestock',
     'weatherstation',
-    'AGV_Rover',
+    'agv',
 ]
 
 MIDDLEWARE = [
