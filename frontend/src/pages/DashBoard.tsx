@@ -1,8 +1,8 @@
 import { FunctionComponent } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
-import GroupComponent from "../components/GroupComponent";
+import NeedHelpBox from "../components/NeedHelpBox/NeedHelpBox";
 import FrameComponent from "../components/FrameComponent";
-import Backgroundlivestock from "../components/Backgroundlivestock";
+import SecondFrame from "../components/SecondFrame";
 import Rainfall from "../components/Rainfall";
 import styles from "./DashBoard.module.css";
 
@@ -15,11 +15,11 @@ const DashBoard: FunctionComponent = () => {
         <div className={styles.backgroundChild} />
         <div className={styles.iconFrame}>
           <Sidebar />
-          <GroupComponent />
+          <NeedHelpBox />
         </div>
         <section className={styles.frameParent}>
           <FrameComponent />
-          <Backgroundlivestock />
+          <SecondFrame />
           <Rainfall camUrl={camUrl} />
         </section>
       </main>

@@ -1,10 +1,11 @@
 import { FunctionComponent } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import styles from "./DashBoard.module.css";
+import UAVvideo from "../components/UAVvideo/UAVvideo";
 
-const Livestock: FunctionComponent = () => {
+const UAV: FunctionComponent = () => {
 
-    const camUrl = 'http://192.168.0.176:8080/video';
+    const camUrl = 'http://192.168.0.133:5000/video_feed';
     return (
         <div className={styles.dashboard}>
             <main className={styles.background}>
@@ -13,11 +14,11 @@ const Livestock: FunctionComponent = () => {
                     <Sidebar />
                 </div>
                 <section className={styles.frameParent}>
-
+                    <UAVvideo camUrl={camUrl} />
                 </section>
             </main>
         </div>
     );
 };
 
-export default Livestock;
+export default UAV;

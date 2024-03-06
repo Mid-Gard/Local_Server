@@ -24,28 +24,30 @@ const Sidebar: FunctionComponent = () => {
             src="/cattle-behavior.svg"
           />
           <div className={styles.totalOnlineProgress}>
-            <Button
-              className={styles.dashboard}
-              startIcon={
-                <img
-                  width="15.3px"
-                  height="15px"
-                  src="/ioniconhhomedefault.svg"
-                />
-              }
-              variant="contained"
-              sx={{
-                textTransform: "none",
-                color: "#fff",
-                fontSize: "14",
-                background: "#1a1f37",
-                borderRadius: "15.000000953674316px",
-                "&:hover": { background: "#1a1f37" },
-                height: 55,
-              }}
-            >
-              Dashboard
-            </Button>
+            <Link to="/" >
+              <Button
+                className={styles.dashboard}
+                startIcon={
+                  <img
+                    width="15.3px"
+                    height="15px"
+                    src="/ioniconhhomedefault.svg"
+                  />
+                }
+                variant="contained"
+                sx={{
+                  textTransform: "none",
+                  color: "#fff",
+                  fontSize: "14",
+                  background: "#1a1f37",
+                  borderRadius: "15.000000953674316px",
+                  "&:hover": { background: "#1a1f37" },
+                  height: 55,
+                }}
+              >
+                Dashboard
+              </Button>
+            </Link>
             <div className={styles.pageLinks}>
               <div className={styles.group}>
                 <div className={styles.tables} onClick={onTablesContainerClick}>

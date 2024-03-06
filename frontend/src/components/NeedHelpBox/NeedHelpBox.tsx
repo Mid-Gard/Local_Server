@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
-import styles from "./GroupComponent.module.css";
+import styles from "./NeedHelpBox.module.css";
 
-const GroupComponent: FunctionComponent = () => {
+const NeedHelpBox: FunctionComponent = () => {
   return (
     <div className={styles.backgroundParent}>
       <img className={styles.backgroundIcon} alt="" src="/background@2x.png" />
@@ -22,4 +22,4 @@ const GroupComponent: FunctionComponent = () => {
   );
 };
 
-export default GroupComponent;
+export default NeedHelpBox;

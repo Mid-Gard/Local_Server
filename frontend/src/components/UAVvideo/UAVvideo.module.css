@@ -1,0 +1,290 @@
+.backgroundChild {
+    width: 697px;
+    height: 325px;
+    position: relative;
+    border-radius: var(--br-xl);
+    background: linear-gradient(126.97deg,
+            rgba(12, 47, 0, 0.74),
+            rgba(0, 65, 57, 0.71));
+    backdrop-filter: blur(120px);
+    display: none;
+    max-width: 100%;
+}
+
+.cctv,
+.viewAll {
+    position: relative;
+    z-index: 4;
+}
+
+.cctv {
+    margin: 0;
+    font-size: inherit;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.viewAll {
+    font-size: var(--font-size-sm);
+    line-height: 140%;
+    cursor: pointer;
+}
+
+.background1,
+.notifications {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.notifications {
+    flex: 1;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+}
+
+.background1 {
+    align-self: stretch;
+    justify-content: flex-start;
+    padding: 0 var(--padding-3xs) 0 0;
+    box-sizing: border-box;
+}
+
+.background2,
+.background3 {
+    /* border: 0;
+  background-color: transparent;
+  height: inherit;
+  width: auto;
+  outline: 0;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-xl);
+  background: linear-gradient(126.97deg,
+      rgba(187, 215, 177, 0.74),
+      rgba(8, 109, 97, 0.71));
+  backdrop-filter: blur(120px);
+  z-index: 4; */
+}
+
+.video_image {
+    height: 18rem;
+    padding-inline: 1rem;
+    border-radius: 2em;
+}
+
+.content,
+.contentWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.content {
+    flex: 1;
+    /* gap: var(--gap-7xl); */
+}
+
+.contentWrapper {
+    align-self: stretch;
+    /* padding: 0 0 0 var(--padding-3xs); */
+    box-sizing: border-box;
+}
+
+.background,
+.background4 {
+    border-radius: var(--br-xl);
+    backdrop-filter: blur(120px);
+    max-width: 100%;
+    z-index: 3;
+}
+
+.background {
+    flex: 1 1;
+    background: linear-gradient(126.97deg, rgba(12, 47, 0, 0.74), rgba(0, 65, 57, 0.71));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-xl) var(--padding-5xl) var(--padding-3xl) var(--padding-mini);
+    box-sizing: border-box;
+    gap: var(--gap-base);
+    min-width: 52rem;
+    max-width: 54rem;
+}
+
+.background4 {
+    border: 0;
+    background-color: transparent;
+    height: 325px;
+    width: fit-content;
+    outline: 0;
+    position: relative;
+    background: linear-gradient(126.97deg, rgba(187, 215, 177, 0.74), rgba(8, 109, 97, 0.71));
+}
+
+.listIcon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    right: -0.1px;
+    bottom: 0;
+    left: 0.1px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.notifications1 {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    z-index: 1;
+}
+
+.ioniconccheckmarkccircle {
+    height: 9.4px;
+    width: 11.4px;
+    position: relative;
+    border-radius: var(--br-xl);
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.span {
+    font-weight: 600;
+}
+
+.thisMonth {
+    position: relative;
+    line-height: 13.5px;
+    z-index: 1;
+}
+
+.checkmarkIcon {
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-11xs);
+    font-size: var(--font-size-sm);
+}
+
+.monthlyNotif,
+.notifsList {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.monthlyNotif {
+    flex: 1;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 18px;
+    gap: var(--gap-xl);
+}
+
+.notifsList {
+    align-self: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-9xs);
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.todaysMoney {
+    border: 0;
+    background-color: transparent;
+    font-family: var(--font-roboto-flex);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--color-gainsboro);
+}
+
+.todaysMoney,
+.todaysMoney1,
+.todaysMoney2 {
+    align-self: stretch;
+    height: 38.5px;
+    z-index: 4;
+}
+
+.cameraDetectNotif {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-12xs);
+    gap: var(--gap-mini);
+    flex-shrink: 0;
+}
+
+.rainfall,
+.secondCard {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.secondCard {
+    width: 401px;
+    filter: drop-shadow(0 3.5px 5.5px rgba(0, 0, 0, 0.02));
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-2xs) var(--padding-base) var(--padding-103xl) var(--padding-smi);
+    box-sizing: border-box;
+    position: relative;
+    gap: var(--gap-12xl);
+    z-index: 3;
+    color: var(--color-silver);
+    font-family: var(--font-roboto-flex);
+}
+
+.rainfall {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--gap-4xl);
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--secondary-primary-white);
+    font-family: var(--font-abhaya-libre);
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .background {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .monthlyNotif,
+    .notifications {
+        flex-wrap: wrap;
+    }
+
+    .secondCard {
+        gap: var(--gap-12xl);
+    }
+}

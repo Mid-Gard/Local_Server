@@ -7,6 +7,11 @@ import {
 } from "react-router-dom";
 import DashBoard from "./pages/DashBoard";
 import Livestock from "./pages/Livestock";
+import CCTV from "./pages/CCTV";
+import Weather from "./pages/Weather";
+import Actuators from "./pages/Actuators";
+import AGV from "./pages/AGV";
+import UAV from "./pages/UAV";
 
 function App() {
   const action = useNavigationType();
@@ -48,6 +53,11 @@ function App() {
     <Routes>
       <Route path="/" element={<DashBoard />} />
       <Route path="/livestock" element={<Livestock />} />
+      <Route path="/weather" element={<Weather />} />
+      <Route path="/cctv" element={<CCTV />} />
+      <Route path="/actuators" element={<Actuators />} />
+      <Route path="/agv" element={<AGV />} />
+      <Route path="/uav" element={<UAV />} />
     </Routes>
   );
 }

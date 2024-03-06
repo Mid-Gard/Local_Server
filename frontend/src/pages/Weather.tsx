@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import styles from "./DashBoard.module.css";
 
-const Livestock: FunctionComponent = () => {
+const Weather: FunctionComponent = () => {
 
     const camUrl = 'http://192.168.0.176:8080/video';
     return (
@@ -20,4 +20,4 @@ const Livestock: FunctionComponent = () => {
     );
 };
 
-export default Livestock;
+export default Weather;

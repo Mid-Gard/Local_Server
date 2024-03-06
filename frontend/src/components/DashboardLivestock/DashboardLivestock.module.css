@@ -1,0 +1,403 @@
+.background2,
+.SecondFrame,
+.cattleBehaviorWrapper {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.background2 {
+    width: 668px;
+    border-radius: var(--br-xl);
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.71));
+    backdrop-filter: blur(120px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--padding-lg) var(--padding-lg) var(--padding-2xl) var(--padding-mini);
+    box-sizing: border-box;
+    gap: var(--gap-mini);
+    min-width: 668px;
+    z-index: 3;
+    font-size: var(--font-size-lg);
+    color: var(--secondary-primary-white);
+    font-family: var(--font-abhaya-libre);
+}
+
+@media screen and (max-width: 1325px) {
+    .background2 {
+        flex: 1;
+    }
+
+    .SecondFrame {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .background2 {
+        min-width: 100%;
+    }
+}
+
+.cattleBehavior,
+.cattleBehaviorWrapper {
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.cattleBehavior {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 var(--padding-12xs) 0 0;
+    gap: var(--gap-6xl);
+    max-width: 100%;
+}
+
+.cattleBehaviorWrapper {
+    width: 596px;
+    flex-direction: row;
+    padding: 0 var(--padding-7xs);
+}
+
+.background2,
+.SecondFrame,
+.cattleBehaviorWrapper {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.cCTVFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-9xs);
+}
+
+.cattleBehaviour {
+    margin: 0;
+    height: 16.7px;
+    position: relative;
+    font-size: inherit;
+    line-height: 140%;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    flex-shrink: 0;
+    z-index: 4;
+}
+
+.thanLastWeekContainer {
+    height: 13.4px;
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: 140%;
+    display: inline-block;
+    flex-shrink: 0;
+    z-index: 4;
+    color: var(--primary-green-500-success-color);
+    font-family: var(--font-roboto-flex);
+}
+
+.span {
+    font-weight: 600;
+}
+
+.thanLastWeek {
+    color: var(--gray-gray-400);
+}
+
+.cattleBehavior1,
+.onlineProgress {
+    display: flex;
+    align-items: flex-start;
+}
+
+.onlineProgress {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+    font-size: var(--font-size-sm);
+    color: var(--gray-gray-400);
+    font-family: var(--font-roboto-flex);
+}
+
+.onlineProgress {
+    flex-wrap: wrap;
+}
+
+.progressFrames {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 var(--padding-12xs) 0 0;
+    gap: var(--gap-2xs);
+}
+
+.walking,
+.wrapperIcon1 {
+    position: relative;
+    z-index: 4;
+}
+
+.wrapperIcon1 {
+    align-self: stretch;
+    width: 25.6px;
+    min-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.walking {
+    line-height: 14px;
+}
+
+.wrapperIconParent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-4xs);
+}
+
+.icon3 {
+    align-self: stretch;
+    width: 100%;
+    max-height: 100%;
+    min-height: 17px;
+    z-index: 4;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    height: 100%;
+    transform: scale(1.655);
+}
+
+.totalOnline,
+.wrapperIcon {
+    position: relative;
+    z-index: 4;
+}
+
+.totalOnline {
+    line-height: 14.6px;
+}
+
+.pMFrames,
+.progressIcon {
+    position: relative;
+    flex-shrink: 0;
+    z-index: 4;
+}
+
+.pMFrames {
+    height: 16px;
+    font-size: var(--font-size-lg);
+    line-height: 140%;
+    font-family: var(--font-abhaya-libre);
+    color: var(--secondary-primary-white);
+    display: inline-block;
+}
+
+.progressIcon {
+    align-self: stretch;
+    height: 3px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.iconTotalOnline1 {
+    height: 44px;
+    width: 114px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-2xs) 0 0;
+    box-sizing: border-box;
+    gap: var(--gap-7xs);
+}
+
+.iconTotalOnline2 {
+    height: 44px;
+    width: 114px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-2xs) 0 0;
+    box-sizing: border-box;
+    gap: var(--gap-7xs);
+}
+
+.wrapperIconGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-4xs);
+}
+
+.idle,
+.wrapperIcon2 {
+    position: relative;
+    z-index: 4;
+}
+
+.wrapperIcon2 {
+    align-self: stretch;
+    width: 25.6px;
+    min-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon5 {
+    align-self: stretch;
+    width: 100%;
+    max-height: 100%;
+    min-height: 17px;
+    z-index: 4;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    height: 100%;
+    transform: scale(1.655);
+}
+
+.idle,
+.wrapperIcon2 {
+    position: relative;
+    z-index: 4;
+}
+
+.wrapperIcon2 {
+    align-self: stretch;
+    width: 25.6px;
+    min-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.idle {
+    line-height: 14px;
+}
+
+.div3,
+.progressIcon2 {
+    position: relative;
+    flex-shrink: 0;
+    z-index: 4;
+}
+
+.div3 {
+    height: 16px;
+    font-size: var(--font-size-lg);
+    line-height: 140%;
+    font-family: var(--font-abhaya-libre);
+    color: var(--secondary-primary-white);
+    display: inline-block;
+}
+
+.progressIcon2 {
+    align-self: stretch;
+    height: 3px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.cattleBehavior1,
+.onlineProgress {
+    display: flex;
+    align-items: flex-start;
+}
+
+.cattleBehavior1 {
+    height: 45px;
+    width: 103px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-7xs);
+}
+
+.onlineOffline {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-4xs);
+}
+
+.icon6 {
+    height: 17px;
+    border-radius: var(--br-7xs);
+    background-color: var(--color-royalblue);
+    box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-9xs) var(--padding-6xs) var(--padding-9xs) var(--padding-7xs);
+    box-sizing: border-box;
+    z-index: 4;
+}
+
+.iconChild {
+    height: 16.8px;
+    width: 25.6px;
+    position: relative;
+    border-radius: var(--br-7xs);
+    background-color: var(--color-royalblue);
+    box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    display: none;
+}
+
+.ioniconbbuilddefault {
+    height: 8.4px;
+    width: 12.8px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.offline {
+    position: relative;
+    line-height: 14px;
+    z-index: 4;
+}
+
+.label,
+.progressIcon3 {
+    position: relative;
+    flex-shrink: 0;
+    z-index: 4;
+}
+
+.label {
+    height: 16px;
+    font-size: var(--font-size-lg);
+    line-height: 140%;
+    font-family: var(--font-abhaya-libre);
+    color: var(--secondary-primary-white);
+    display: inline-block;
+}
+
+.progressIcon3 {
+    align-self: stretch;
+    height: 3px;
+    max-width: 100%;
+    overflow: hidden;
+}
