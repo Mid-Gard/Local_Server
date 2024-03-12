@@ -26,8 +26,7 @@ def weather_get(request):
     global stored_data
     if request.method == 'POST':
         received_data = json.loads(request.body.decode('utf-8'))
-        weather_data = received_data.get('weather_data', {}
-                                         )
+        weather_data = received_data.get('weather_data', {})
         # received_data = json.loads(request.body)
         print(" \n")
         print("Received data:", received_data)
@@ -58,7 +57,37 @@ def weather_get(request):
         return JsonResponse({'status': 'Data received successfully'})
     else:
         return JsonResponse({'error': 'Invalid request method'})
+
+
+from django.http import JsonResponse
+from .models import WeatherData
+
+@csrf_exempt
+def get_rainfall(request):
+    # Enable the below code for Testing :
     
+    dummy_rainfall = [{'RainGuage': random.uniform(0, 50)} for _ in range(10)]
+    # Return the dummy rainfall data as JSON response
+    return JsonResponse(dummy_rainfall, safe=False)
+    
+    # ENABLE the below code for database : 
+    
+    # # Query the latest 10 rainfall values from the database
+    # latest_rainfall = WeatherData.objects.order_by('-id')[:10].values('RainGuage')
+    # # Convert QuerySet to a list of dictionaries
+    # rainfall_list = list(latest_rainfall)
+    # # Return the JSON response
+    # return JsonResponse(rainfall_list, safe=False)
+
+@csrf_exempt
+def get_windspeed(request):
+    # Query the latest 10 wind speed values from the database
+    latest_windspeed = WeatherData.objects.order_by('-id')[:10].values('WindSpeed')
+    # Convert QuerySet to a list of dictionaries
+    windspeed_list = list(latest_windspeed)
+    # Return the JSON response
+    return JsonResponse(windspeed_list, safe=False)
+
 
 @csrf_exempt
 def weather_view(request):
@@ -88,6 +117,10 @@ def test_post(request):
         return JsonResponse({'status': 'Data received successfully'})
     else:
         return JsonResponse({'error': 'Invalid request method'})
+
+
+
+
 
 
 '''
