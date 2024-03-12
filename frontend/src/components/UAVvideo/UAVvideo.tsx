@@ -1,6 +1,5 @@
 import { FunctionComponent, useCallback, useState } from "react";
 import { Button } from "@mui/material";
-import Weather from "../Weather";
 import styles from "./UAVvideo.module.css";
 import { Link } from "react-router-dom";
 import Livestock from "../../pages/Livestock";
@@ -24,17 +23,19 @@ function UAVvideo({ camUrl }: cctvCamfeedProps) {
         <div className={styles.background}>
             <div className={styles.background1}>
                 <div className={styles.notifications}>
-                    <h3 className={styles.cctv}>CCTV</h3>
-                    <div
-                        className={styles.viewAll}
-                        onClick={onViewAllClick}
-                    >{`View All ->`}</div>
+                    <h3 className={styles.cctv}>Drone Video Feed</h3>
                 </div>
             </div>
             <div className={styles.contentWrapper}>
                 <div className={styles.content}>
-                    <div className={styles.background2} >
-                        <img id="browser_video" className={styles.video_image} alt="video" src={camUrl} />
+                    <div className={styles.background2}>
+                        <img
+                            id="browser_video"
+                            className={styles.video_image}
+                            alt="video"
+                            src={camUrl}
+                            style={{ clipPath: 'inset(9% 0 0 0)' }} // Apply clip-path CSS to crop top 10%
+                        />
                     </div>
                 </div>
             </div>

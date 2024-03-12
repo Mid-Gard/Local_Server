@@ -1,6 +1,5 @@
 import { FunctionComponent, useCallback } from "react";
 import { Button } from "@mui/material";
-import Weather from "../Weather";
 import styles from "./Sidebar.module.css";
 import { Link } from "react-router-dom";
 import Livestock from "../../pages/Livestock";

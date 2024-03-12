@@ -27,7 +27,7 @@
 
 .frameParent {
   flex: 1;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: var(--gap-xs);
   max-width: calc(100% - 279px);
 }
@@ -37,6 +37,29 @@
   overflow: hidden;
   display: flex;
   flex-direction: row;
+}
+
+.AGVHomeContent {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  max-width: 68%;
+  min-width: 60%;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* background-color: #f0f8ff80; */
+  min-height: 100vh;
+  justify-content: flex-start;
 }
 
 .background {

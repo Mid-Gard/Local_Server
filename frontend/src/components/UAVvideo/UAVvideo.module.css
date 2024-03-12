@@ -19,10 +19,11 @@
 
 .cctv {
     margin: 0;
-    font-size: inherit;
+    font-size: x-large;
     line-height: 18px;
-    font-weight: 400;
+    font-weight: 800;
     font-family: inherit;
+    padding-inline: 1rem;
 }
 
 .viewAll {
@@ -37,6 +38,7 @@
     flex-direction: row;
     align-items: flex-start;
     max-width: 100%;
+    color: aliceblue;
 }
 
 .notifications {

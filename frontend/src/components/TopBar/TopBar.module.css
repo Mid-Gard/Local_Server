@@ -1,0 +1,665 @@
+.frameIcon {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--br-xl);
+    max-height: 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.aarasFarm {
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.aarasFarm,
+.saturday10thFebruary {
+    width: 262px;
+    position: relative;
+    line-height: 100%;
+    font-weight: 600;
+    display: inline-block;
+    flex-shrink: 0;
+    z-index: 4;
+}
+
+.background {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--padding-xs) 0 var(--padding-2xs) var(--padding-xl);
+    box-sizing: border-box;
+    position: relative;
+    min-width: 560px;
+    gap: var(--gap-xl);
+    max-width: 100%;
+}
+
+.inputwithaddons {
+    border: 0;
+    background-color: transparent;
+    height: 27.4px;
+    flex: 1;
+    font-family: var(--font-roboto-flex);
+    font-weight: 600;
+    font-size: var(--font-size-xs);
+    color: var(--gray-gray-400);
+    min-width: 247px;
+    max-width: 100%;
+    z-index: 3;
+}
+
+.ioniconppersondefault {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.frameTitle,
+.iconFrame {
+    height: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.frameTitle {
+    height: 10px;
+    justify-content: flex-end;
+}
+
+.signIn {
+    position: relative;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.livestockOutsideFrame {
+    align-self: stretch;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.frameFrame,
+.listitemdefault {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.frameFrame {
+    height: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.listitemdefault {
+    height: 10.4px;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--gap-9xs);
+    z-index: 3;
+}
+
+.ioniconnnotificationsdefaul,
+.ioniconssettingssharp {
+    height: 7.8px;
+    width: 12px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 3;
+}
+
+.icon,
+.inputwithaddonsParent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.icon {
+    height: 10px;
+    width: 118px;
+    align-items: flex-start;
+    padding: 0 var(--padding-11xs) 0 0;
+    gap: var(--gap-mid);
+}
+
+.inputwithaddonsParent {
+    align-self: stretch;
+    align-items: center;
+    padding: 0 var(--padding-12xs) 0 0;
+    gap: var(--gap-7xl);
+    max-width: 100%;
+}
+
+.backgroundParent,
+.frameWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.frameWrapper {
+    width: 525px;
+    flex-direction: column;
+    padding: var(--padding-10xs) 0 0;
+    box-sizing: border-box;
+    font-size: var(--font-size-xs);
+}
+
+.backgroundParent {
+    align-self: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: larger;
+    color: aliceblue;
+    gap: var(--gap-174xl);
+}
+
+.todaysMoneyChild {
+    height: 52.2px;
+    width: 382px;
+    position: relative;
+    border-radius: var(--br-xl);
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.5));
+    backdrop-filter: blur(120px);
+    display: none;
+    max-width: 100%;
+}
+
+.livestockInside {
+    position: relative;
+    line-height: 100%;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.livestockOutside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-7xs) 0 0;
+}
+
+.div,
+.frameAM {
+    position: relative;
+    line-height: 140%;
+    font-weight: 600;
+    display: inline-block;
+    z-index: 1;
+}
+
+.div {
+    height: 21px;
+    font-size: var(--font-size-lg);
+    color: var(--secondary-primary-white);
+}
+
+.frameAM {
+    height: 13px;
+    flex-shrink: 0;
+}
+
+.background1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-10xs) 0 0;
+}
+
+.icon1 {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    transform: scale(1.363);
+}
+
+.wrapperIcon {
+    height: 30.3px;
+    width: 35.5px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frameAMPM {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-3xl);
+    color: var(--primary-green-500-success-color);
+}
+
+.todaysMoney,
+.todaysUsersChild {
+    border-radius: var(--br-xl);
+    backdrop-filter: blur(120px);
+    max-width: 100%;
+}
+
+.todaysMoney {
+    flex: 0.9713;
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.5));
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--padding-2xs) var(--padding-3xl);
+    box-sizing: border-box;
+    min-width: 252px;
+    gap: var(--gap-xl);
+    z-index: 3;
+    font-size: var(--font-size-sm);
+}
+
+.todaysUsersChild {
+    height: 52.2px;
+    width: 382px;
+    position: relative;
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.5) 93.06%);
+    display: none;
+}
+
+.backgroundIcon,
+.blank,
+.livestockOutside1 {
+    position: relative;
+    line-height: 100%;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.backgroundIcon,
+.blank {
+    height: 16px;
+    line-height: 140%;
+    display: inline-block;
+    z-index: 4;
+}
+
+.backgroundIcon {
+    height: 13px;
+    flex-shrink: 0;
+}
+
+.livestockSummaryFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-10xs) 0 0;
+    font-size: var(--font-size-sm);
+    color: var(--primary-green-500-success-color);
+}
+
+.icon2 {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    transform: scale(1.374);
+}
+
+.wrapperIcon1 {
+    height: 29.4px;
+    width: 35.5px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blankParent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-12xs) 0 0;
+    gap: var(--gap-7xl);
+    font-size: var(--font-size-lg);
+    color: var(--secondary-primary-white);
+}
+
+.newClientsChild,
+.todaysUsers {
+    border-radius: var(--br-xl);
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.5) 93.06%);
+    backdrop-filter: blur(120px);
+    max-width: 100%;
+}
+
+.todaysUsers {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-2xs) var(--padding-mini) var(--padding-xs) var(--padding-lgi);
+    box-sizing: border-box;
+    min-width: 252px;
+    gap: var(--gap-xl);
+    z-index: 3;
+}
+
+.newClientsChild {
+    height: 52.2px;
+    width: 382px;
+    position: relative;
+    display: none;
+}
+
+.graphFrameBorder,
+.newClients1,
+.reportsFrame {
+    position: relative;
+    line-height: 100%;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.graphFrameBorder,
+.reportsFrame {
+    line-height: 140%;
+}
+
+.graphFrameBorder {
+    height: 13px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.secondCardNotificationsButt {
+    flex-direction: column;
+    padding: var(--padding-10xs) 0 0;
+    font-size: var(--font-size-sm);
+    color: var(--primary-red-500-error-color);
+}
+
+.frameIcon1,
+.newClientsParent,
+.secondCardNotificationsButt {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.frameIcon1 {
+    flex-direction: row;
+    gap: var(--gap-4xs);
+    margin-top: -1px;
+    font-size: var(--font-size-lg);
+    color: var(--secondary-primary-white);
+}
+
+.newClientsParent {
+    flex-direction: column;
+}
+
+.icon3 {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    transform: scale(1.374);
+}
+
+.wrapperIcon2 {
+    height: 29.4px;
+    width: 34.5px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newClients,
+.totalSalesChild {
+    border-radius: var(--br-xl);
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.5) 93.06%);
+    backdrop-filter: blur(120px);
+    max-width: 100%;
+}
+
+.newClients {
+    flex: 0.9971;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--padding-2xs) var(--padding-mini) var(--padding-9xs) var(--padding-xl);
+    box-sizing: border-box;
+    min-width: 252px;
+    gap: var(--gap-xl);
+    z-index: 3;
+}
+
+.totalSalesChild {
+    height: 52.2px;
+    width: 382px;
+    position: relative;
+    display: none;
+}
+
+.blank1,
+.totalSales1 {
+    position: relative;
+    line-height: 100%;
+    z-index: 1;
+}
+
+.blank1 {
+    height: 16px;
+    font-size: var(--font-size-lg);
+    line-height: 140%;
+    font-family: var(--font-abhaya-libre);
+    color: var(--secondary-primary-white);
+    display: inline-block;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-top: -1px;
+}
+
+.totalSalesParent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.div1 {
+    height: 13px;
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: 140%;
+    font-family: var(--font-abhaya-libre);
+    color: var(--primary-green-500-success-color);
+    display: inline-block;
+    z-index: 1;
+}
+
+.frameGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-lg);
+}
+
+.icon4,
+.wrapperIcon3 {
+    align-self: stretch;
+    min-height: 29px;
+    z-index: 1;
+}
+
+.icon4 {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    height: 100%;
+    transform: scale(1.374);
+}
+
+.wrapperIcon3 {
+    width: 45px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frameParent,
+.todaysMoneyFrame,
+.totalSales {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.totalSales {
+    flex: 0.9856;
+    border-radius: var(--br-xl);
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.5) 93.06%);
+    backdrop-filter: blur(120px);
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: var(--padding-2xs) var(--padding-mid) var(--padding-xs) var(--padding-3xl);
+    min-width: 252px;
+    gap: var(--gap-xl);
+    z-index: 3;
+}
+
+.frameParent,
+.todaysMoneyFrame {
+    align-self: stretch;
+    align-items: flex-start;
+    text-align: left;
+    font-family: var(--font-roboto-flex);
+}
+
+.todaysMoneyFrame {
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 var(--padding-11xs) 0 0;
+    gap: var(--gap-4xl);
+    white-space: nowrap;
+    font-size: var(--font-size-xs);
+    color: var(--gray-gray-400);
+}
+
+.frameParent {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 var(--padding-7xs) 0 0;
+    gap: var(--gap-lgi);
+    font-size: var(--font-size-lg);
+    color: var(--secondary-primary-white);
+}
+
+@media screen and (max-width: 1325px) {
+    .backgroundParent {
+        gap: var(--gap-174xl);
+    }
+
+    .todaysMoneyFrame {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .background {
+        flex-wrap: wrap;
+        padding-right: var(--padding-xl);
+        box-sizing: border-box;
+        min-width: 100%;
+    }
+
+    .backgroundParent {
+        gap: var(--gap-174xl);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .inputwithaddonsParent {
+        flex-wrap: wrap;
+    }
+
+    .backgroundParent {
+        gap: var(--gap-174xl);
+    }
+
+    .todaysMoney {
+        flex: 1;
+    }
+
+    .todaysMoney,
+    .todaysUsers {
+        flex-wrap: wrap;
+    }
+
+    .newClients,
+    .totalSales {
+        flex-wrap: wrap;
+        flex: 1;
+    }
+}

@@ -5,6 +5,7 @@ import DashboardFirstFrame from "../components/DashboardFirstFrame/DashboardFirs
 import SecondFrame from "../components/DashboardSecondFrame/SecondFrame";
 import DashboardThirdFrame from "../components/DashboardThirdFrame/DashboardThirdFrame";
 import styles from "./DashBoard.module.css";
+import TopBar from "../components/TopBar/TopBar";
 
 const DashBoard: FunctionComponent = () => {
 
@@ -18,6 +19,7 @@ const DashBoard: FunctionComponent = () => {
           <NeedHelpBox />
         </div>
         <section className={styles.frameParent}>
+          <TopBar />
           <DashboardFirstFrame />
           <SecondFrame />
           <DashboardThirdFrame camUrl={camUrl} />

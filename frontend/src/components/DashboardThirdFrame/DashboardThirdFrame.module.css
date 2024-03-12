@@ -258,13 +258,13 @@
   flex-direction: row;
   display: flex;
   flex-wrap: nowrap;
+  align-self: flex-end;
   gap: var(--gap-4xl);
   text-align: left;
   font-size: var(--font-size-lg);
   color: var(--secondary-primary-white);
   font-family: var(--font-abhaya-libre);
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 @media screen and (max-width: 800px) {
