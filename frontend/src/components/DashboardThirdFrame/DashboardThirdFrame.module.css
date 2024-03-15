@@ -70,9 +70,10 @@
 }
 
 .video_image {
-  height: 18rem;
+  height: 22rem;
+  max-width: 26rem;
   padding-inline: 1rem;
-  border-radius: 2em;
+  border-radius: 2rem;
 }
 
 .content,
@@ -141,16 +142,6 @@
   max-height: 100%;
 }
 
-.notifications1 {
-  margin: 0;
-  position: relative;
-  font-size: inherit;
-  line-height: 15px;
-  font-weight: 600;
-  font-family: inherit;
-  z-index: 1;
-}
-
 .ioniconccheckmarkccircle {
   height: 9.4px;
   width: 11.4px;
@@ -163,46 +154,6 @@
 
 .span {
   font-weight: 600;
-}
-
-.thisMonth {
-  position: relative;
-  line-height: 13.5px;
-  z-index: 1;
-}
-
-.checkmarkIcon {
-  height: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-11xs);
-  font-size: var(--font-size-sm);
-}
-
-.monthlyNotif,
-.notifsList {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-}
-
-.monthlyNotif {
-  flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
-  min-height: 18px;
-  gap: var(--gap-xl);
-}
-
-.notifsList {
-  align-self: stretch;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 0 var(--padding-9xs);
-  box-sizing: border-box;
-  flex-shrink: 0;
 }
 
 .todaysMoney {
@@ -256,6 +207,7 @@
 
 .DashboardThirdFrame {
   flex-direction: row;
+  min-height: 34vh;
   display: flex;
   flex-wrap: nowrap;
   align-self: flex-end;

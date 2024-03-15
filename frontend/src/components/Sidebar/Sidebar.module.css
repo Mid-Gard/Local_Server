@@ -1,3 +1,13 @@
+/* Sidebar.module.css */
+.sidebar {
+  padding: var(--padding-8xl) var(--padding-8xs) var(--padding-18xl);
+  height: 76vh;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--secondary-primary-white);
+  font-family: var(--font-roboto-flex);
+}
+
 .listIcon {
   width: 100%;
   height: 100%;
@@ -14,6 +24,15 @@
   object-fit: cover;
 }
 
+.farmManagementWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xl);
+  text-align: center;
+}
+
 .farmManagement {
   position: relative;
   letter-spacing: 0.18em;
@@ -24,18 +43,16 @@
   z-index: 1;
 }
 
-.farmManagementWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-9xl);
-  text-align: center;
-}
-
 .sidbarLinks {
   display: flex;
   flex-direction: column;
+}
+
+.background,
+.totalOnlineProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .cattleBehaviorIcon {
@@ -48,11 +65,49 @@
   z-index: 1;
 }
 
-.dashboard {
+.LinkButton {
+  display: flex;
   align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-6xs);
+  gap: var(--gap-xs);
+  flex-direction: column;
+}
+
+.activeLink {
+  /* align-self: stretch; */
+  height: 54.2px;
+  display: flex;
+  z-index: 1;
+  min-width: 4rem;
+  font-size: large;
+  padding-inline: 4rem;
+  border-radius: 2rem;
+  color: "#fff";
+  background-color: #1a1f37a4;
+  backdrop-filter: blur(10px);
+  margin-inline: 1rem;
+  align-items: center;
+}
+
+.normalLink {
+  align-self: stretch;
+  padding-inline: 4rem;
   height: 54.2px;
   z-index: 1;
   font-size: large;
+  border-radius: 3rem;
+  color: "#fff";
+  margin-inline: 1rem;
+  background-color: rgba(182, 182, 182, 0.048);
+  backdrop-filter: blur(10px);
+}
+
+.buttonText {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: larger;
+  text-decoration: none;
 }
 
 .iconFrameChild {
@@ -74,7 +129,7 @@
   z-index: 1;
 }
 
-.nav_link{
+.nav_link {
   text-decoration: none;
   font-weight: 100;
   color: #fff;
@@ -373,20 +428,6 @@
   box-sizing: border-box;
 }
 
-.background,
-.totalOnlineProgress {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.totalOnlineProgress {
-  align-self: stretch;
-  align-items: flex-start;
-  padding: 0 var(--padding-6xs);
-  gap: var(--gap-xs);
-}
-
 .background {
   width: 238px;
   align-items: center;
@@ -541,13 +582,24 @@
   gap: var(--gap-mid);
 }
 
-.frameIcon,
+.frameIcon {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-6xs);
+  gap: var(--gap-xs);
+  flex-direction: column;
+  margin-block-start: 6rem;
+}
+
 .sidebar {
   align-self: stretch;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   padding: 0 0 0 var(--padding-9xs);
   margin-block-start: 7rem;
   font-size: var(--font-size-xs);
+  gap: (--gap-xs);
 }
 
 .sidebar {

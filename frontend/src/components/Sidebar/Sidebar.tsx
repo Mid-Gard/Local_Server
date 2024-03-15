@@ -1,13 +1,14 @@
 import { FunctionComponent, useCallback } from "react";
 import { Button } from "@mui/material";
 import styles from "./Sidebar.module.css";
-import { Link } from "react-router-dom";
-import Livestock from "../../pages/Livestock";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar: FunctionComponent = () => {
-  const onTablesContainerClick = useCallback(() => {
-    // Please sync "LiveStock Tab" to the project
-  }, []);
+  const location = useLocation();
+
+  const isActiveLink = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <div className={styles.sidebar}>
@@ -22,163 +23,162 @@ const Sidebar: FunctionComponent = () => {
             alt=""
             src="/cattle-behavior.svg"
           />
-          <div className={styles.totalOnlineProgress}>
+          <div className={styles.LinkButton}>
             <Link to="/" >
               <Button
-                className={styles.dashboard}
+                className={isActiveLink("/") ? styles.activeLink : styles.normalLink}
                 startIcon={
                   <img
-                    width="15.3px"
-                    height="15px"
-                    src="/ioniconhhomedefault.svg"
+                    width="20px"
+                    height="20px"
+                    src="/homeicon.svg"
                   />
                 }
-                variant="contained"
-                sx={{
-                  textTransform: "none",
-                  color: "#fff",
-                  fontSize: "14",
-                  background: "#1a1f37",
-                  borderRadius: "15.000000953674316px",
-                  "&:hover": { background: "#1a1f37" },
-                  height: 55,
-                }}
               >
+                <div className={styles.buttonText}>
                 Dashboard
+                </div>
               </Button>
             </Link>
-            <div className={styles.pageLinks}>
-              <div className={styles.group}>
-                <div className={styles.tables} onClick={onTablesContainerClick}>
-                  <div className={styles.weather}>
-                    <div className={styles.secondCard} />
-                    <div className={styles.weather1}>
-                      <Link to="/livestock" className={styles.nav_link}>
-                        Livestock
-                      </Link>
-                    </div>
-                    <img
-                      className={styles.ioniconccarddefault}
-                      loading="eager"
-                      alt=""
-                      src="/ioniconccarddefault.svg"
-                    />
-                  </div>
-                  <div className={styles.weather}>
-                    <div className={styles.secondCard} />
-                    <div className={styles.weather1}>
-                      <Link to="/weather" className={styles.nav_link}>
-                        Weather
-                      </Link>
-                    </div>
-                    <img
-                      className={styles.ioniconccarddefault}
-                      loading="eager"
-                      alt=""
-                      src="/ioniconccarddefault.svg"
-                    />
-                  </div>
-                  <div className={styles.weather}>
-                    <div className={styles.secondCard} />
-                    <div className={styles.weather1}>
-                      <Link to="/cctv" className={styles.nav_link}>
-                        CCTV
-                      </Link>
-                    </div>
-                    <img
-                      className={styles.ioniconccarddefault}
-                      loading="eager"
-                      alt=""
-                      src="/ioniconccarddefault.svg"
-                    />
-                  </div>
-                  <div className={styles.weather}>
-                    <div className={styles.secondCard} />
-                    <div className={styles.weather1}>
-                      <Link to="/actuators" className={styles.nav_link}>
-                        Actuators
-                      </Link>
-                    </div>
-                    <img
-                      className={styles.ioniconccarddefault}
-                      loading="eager"
-                      alt=""
-                      src="/ioniconccarddefault.svg"
-                    />
-                  </div>
-                  <div className={styles.weather}>
-                    <div className={styles.secondCard} />
-                    <div className={styles.weather1}>
-                      <Link to="/agv" className={styles.nav_link}>
-                        AGV
-                      </Link>
-                    </div>
-                    <img
-                      className={styles.ioniconccarddefault}
-                      loading="eager"
-                      alt=""
-                      src="/ioniconccarddefault.svg"
-                    />
-                  </div>
-                  <div className={styles.weather}>
-                    <div className={styles.secondCard} />
-                    <div className={styles.weather1}>
-                      <Link to="/uav" className={styles.nav_link}>
-                        UAV
-                      </Link>
-                    </div>
-                    <img
-                      className={styles.ioniconccarddefault}
-                      loading="eager"
-                      alt=""
-                      src="/ioniconccarddefault.svg"
-                    />
-                  </div>
+            <Link to="/livestock" >
+              <Button
+                className={isActiveLink("/livestock") ? styles.activeLink : styles.normalLink}
+                startIcon={
+                  <img
+                    width="30px"
+                    height="30px"
+                    src="/livestockicon.svg"
+                  />
+                }
+              >
+                <div className={styles.buttonText}>
+                  Livestock
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.frameIcon}>
-            <div className={styles.livestockOutsideFrame}>
-              <img
-                className={styles.vector8Stroke}
-                loading="eager"
-                alt=""
-                src="/vector-8-stroke.svg"
-              />
-              <div className={styles.analyzeDataFrame}>
-                <div className={styles.accountPages}>ACCOUNT PAGES</div>
-              </div>
-              <div className={styles.DashboardThirdFrameFrame}>
-                <div className={styles.cattleBehaviourFrame}>
-                  <div className={styles.aMFrame}>
-                    <div className={styles.pMFrame}>
-                      <div className={styles.pMFrameChild} />
-                      <img
-                        className={styles.ioniconppersondefault}
-                        loading="eager"
-                        alt=""
-                        src="/ioniconppersondefault.svg"
-                      />
-                    </div>
-                    <div className={styles.farmers}>Farmers</div>
-                  </div>
-                  <div className={styles.aMFrame1}>
-                    <div className={styles.rectangleParent1}>
-                      <div className={styles.frameChild1} />
-                      <img
-                        className={styles.ioniconrrocketsharp}
-                        loading="eager"
-                        alt=""
-                        src="/ioniconrrocketsharp.svg"
-                      />
-                    </div>
-                    <div className={styles.profile}>Profile</div>
-                  </div>
+              </Button>
+            </Link>
+            <Link to="/weather" >
+              <Button
+                className={isActiveLink("/weather") ? styles.activeLink : styles.normalLink}
+                startIcon={
+                  <img
+                    width="30px"
+                    height="30px"
+                    src="/weathericon.svg"
+                  />
+                }
+              >
+                <div className={styles.buttonText}>
+                Weather
                 </div>
-              </div>
-            </div>
+              </Button>
+            </Link>
+            <Link to="/cctv" >
+              <Button
+                className={isActiveLink("/cctv") ? styles.activeLink : styles.normalLink}
+                startIcon={
+                  <img
+                    width="30px"
+                    height="30px"
+                    src="/cctvicon.svg"
+                  />
+                }
+              >
+                <div className={styles.buttonText}>
+                CCTV
+                </div>
+              </Button>
+            </Link>
+            <Link to="/actuators" >
+              <Button
+                className={isActiveLink("/actuators") ? styles.activeLink : styles.normalLink}
+                startIcon={
+                  <img
+                    width="30px"
+                    height="30px"
+                    src="/actuatoricon.svg"
+                  />
+                }
+              >
+                <div className={styles.buttonText}>
+                Actuators
+                </div>
+              </Button>
+            </Link>
+            <Link to="/agv" >
+              <Button
+                className={isActiveLink("/agv") ? styles.activeLink : styles.normalLink}
+                startIcon={
+                  <img
+                    width="30px"
+                    height="30px"
+                    src="/agvicon.svg"
+                  />
+                }
+              >
+                <div className={styles.buttonText}>
+                AGV
+                </div>
+              </Button>
+            </Link>
+            <Link to="/uav" >
+              <Button
+                className={isActiveLink("/uav") ? styles.activeLink : styles.normalLink}
+                startIcon={
+                  <img
+                    width="30px"
+                    height="30px"
+                    src="/uavicon.svg"
+                  />
+                }
+              >
+                <div className={styles.buttonText}>
+                UAV
+                </div>
+              </Button>
+            </Link>
           </div>
+        </div>
+        <div className={styles.frameIcon}>
+          <div className={styles.livestockOutsideFrame}>
+            <img
+              className={styles.vector8Stroke}
+              loading="eager"
+              alt=""
+              src="/vector-8-stroke.svg"
+            />
+          </div>
+          <Link to="/profile" >
+            <Button
+              className={isActiveLink("/profile") ? styles.activeLink : styles.normalLink}
+              startIcon={
+                <img
+                  width="30px"
+                  height="30px"
+                  src="/profileicon.svg"
+                />
+              }
+            >
+              <div className={styles.buttonText}>
+              Profile
+              </div>
+            </Button>
+          </Link>
+          <Link to="/farmers" >
+            <Button
+              className={isActiveLink("/farmers") ? styles.activeLink : styles.normalLink}
+              startIcon={
+                <img
+                  width="30px"
+                  height="30px"
+                  src="/famersicon.svg"
+                />
+              }
+            >
+              <div className={styles.buttonText}>
+              Farmers
+              </div>
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
@@ -186,3 +186,36 @@ const Sidebar: FunctionComponent = () => {
 };
 
 export default Sidebar;
+
+
+
+
+
+
+
+
+/*
+
+            <div className={styles.pageLinks}>
+              <div className={styles.group}>
+                <div className={styles.tables}>
+                  <div className={styles.weather}>
+                    <div className={styles.TabLink}>
+                      <Link to="/livestock" className={`${styles.dashboard} ${isActiveLink("/livestock") ? styles.dashboard : ''}`}>
+                        <Button variant="text">
+                          <img
+                            className={styles.ioniconccarddefault}
+                            loading="eager"
+                            alt=""
+                            src="/ioniconccarddefault.svg"
+                          />
+                          Livestock
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div >
+              </div >
+            </div >
+
+*/
