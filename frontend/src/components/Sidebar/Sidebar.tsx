@@ -29,8 +29,8 @@ const Sidebar: FunctionComponent = () => {
                 className={isActiveLink("/") ? styles.activeLink : styles.normalLink}
                 startIcon={
                   <img
-                    width="20px"
-                    height="20px"
+                    width="25px"
+                    height="25px"
                     src="/homeicon.svg"
                   />
                 }

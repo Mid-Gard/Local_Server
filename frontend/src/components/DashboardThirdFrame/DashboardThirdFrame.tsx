@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import styles from "./DashboardThirdFrame.module.css";
 import NotificationBox from "../NotificationBox/NotificationBox";
+import IrrigationMap from "../IrrigationMap/IrrigationMap";
 
 interface cctvCamfeedProps {
   camUrl: string;
@@ -22,6 +23,7 @@ function DashboardThirdFrame({ camUrl }: cctvCamfeedProps) {
 
   return (
     <div className={styles.DashboardThirdFrame}>
+      <IrrigationMap />
       <div className={styles.CCTVbox}>
         <div className={styles.background1}>
           <div className={styles.notifications}>

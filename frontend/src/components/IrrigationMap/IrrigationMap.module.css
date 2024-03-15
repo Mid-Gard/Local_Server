@@ -1,0 +1,18 @@
+.background {
+    border-radius: var(--br-xl);
+    backdrop-filter: blur(120px);
+    max-width: 100%;
+    min-width: 26vw;
+    max-height: 100%;
+    z-index: 3;
+}
+
+.background {
+    background: linear-gradient(126.97deg, rgba(12, 47, 0, 0.74), rgba(0, 65, 57, 0.71));
+}
+
+.title {
+    font-size: 1.8rem;
+    color: aliceblue;
+    padding: 1rem;
+}

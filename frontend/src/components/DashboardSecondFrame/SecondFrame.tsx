@@ -8,6 +8,8 @@ import "leaflet/dist/leaflet.css";
 import LivestockMap from "../LivestockMap/LivestockMap";
 import DashBoard from "../../pages/DashBoard";
 import DashboardLivetock from "../DashboardLivestock/DashboardLivestock"
+import DashboardWeatherCard from "../DashboardWeatherCard/DashboardWeatherCard";
+import DashboardWeatherForecast from "../DashboardWeatherForecast/DashboardWeatherForecast";
 
 // Define the type for location objects
 interface Location {
@@ -63,6 +65,8 @@ const SecondFrame: FunctionComponent = () => {
               onClick={onIconClick}
             >{`Reports ->`}</Button>
           </div>
+          <DashboardWeatherCard />
+          <DashboardWeatherForecast />
         </div>
         <div className={styles.background1}>
           <div className={styles.DashboardThirdFrameInchesFrame}>

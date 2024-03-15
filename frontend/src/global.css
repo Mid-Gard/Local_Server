@@ -34,7 +34,7 @@ body {
 
   /* Gaps */
   --gap-xs: 12px;
-  --gap-4xl: 23px;
+  --gap-4xl: 1rem;
   --gap-12xl: 31px;
   --gap-mini: 15px;
   --gap-xl: 20px;

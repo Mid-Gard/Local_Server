@@ -1,5 +1,5 @@
 .backgroundIcon {
-  width: 40%;
+  width: 100%;
   height: 100%;
   position: absolute;
   margin: 0 !important;
@@ -83,7 +83,7 @@
 }
 
 .firstCard {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -92,8 +92,10 @@
   box-sizing: border-box;
   position: relative;
   gap: var(--gap-smi);
-  min-width: 424px;
-  max-width: 100%;
+  /* min-width: 424px; */
+  /* max-width: 100%; */
+  max-width: -moz-fit-content;
+  max-width: 35%;
   z-index: 3;
 }
 
@@ -244,7 +246,6 @@
 .background {
   align-self: stretch;
   flex-direction: row;
-  align-items: flex-start;
   gap: var(--gap-lg);
   max-width: 100%;
 }
