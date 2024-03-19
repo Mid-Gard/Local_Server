@@ -17,7 +17,7 @@ function DashboardWeatherForecast() {
     return (
         <div className={styles.weatherreportcard}>
             <div className={styles.frame}>
-                <div className={styles.title}>Weather Report</div>
+                <div className={styles.title}>Goggle Weather Forecast</div>
                 <div className={styles.seeallbutton}>
                     <div className={styles.wrapperRectangle3}>
                         <img

@@ -1,8 +1,5 @@
 import { FunctionComponent, useCallback, useState } from "react";
-import { Button } from "@mui/material";
 import styles from "./UAVvideo.module.css";
-import { Link } from "react-router-dom";
-import Livestock from "../../pages/Livestock";
 
 
 interface cctvCamfeedProps {

@@ -1,74 +1,44 @@
-import { FunctionComponent, useCallback, useState, useRef } from "react";
+// --------------- by phind, using htmlCanvas module
+
+import { FunctionComponent, useCallback, useState } from "react";
 import { Button } from "@mui/material";
 import styles from "./AGVvideo.module.css";
-import { Link } from "react-router-dom";
-import Livestock from "../../pages/Livestock";
+import html2canvas from 'html2canvas'; // Import html2canvas
+import { useEffect } from "react";
 
 interface cctvCamfeedProps {
     camUrl: string;
 }
 
 function AGVvideoFeed({ camUrl }: cctvCamfeedProps) {
-    const videoRef = useRef<HTMLVideoElement>(null);
-    const mediaRecorder = useRef<MediaRecorder | null>(null);
-    const chunks = useRef<Blob[]>([]);
+    const [screenCapture, setScreenCapture] = useState<string>('');
 
-    const startRecording = () => {
-        if (!videoRef.current) return;
+    const handleScreenCapture = async () => {
+        const imgElement = document.querySelector('.video_image') as HTMLImageElement;
+        if (imgElement) {
+            const canvas = await html2canvas(imgElement);
+            const base64Source = canvas.toDataURL('image/png');
+            setScreenCapture(base64Source);
+            localStorage.setItem('capturedImage', base64Source); // Save to local storage
+            console.log(localStorage.getItem('capturedImage'));
 
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then((stream) => {
-                mediaRecorder.current = new MediaRecorder(stream);
-                chunks.current = [];
-
-                mediaRecorder.current.ondataavailable = (event) => {
-                    chunks.current.push(event.data);
-                };
-
-                mediaRecorder.current.onstop = () => {
-                    const blob = new Blob(chunks.current, { type: 'video/webm' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'recorded-video.webm';
-                    document.body.appendChild(a);
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                };
-
-                mediaRecorder.current.start();
-            })
-            .catch((error) => {
-                console.error('Error accessing camera:', error);
-            });
+        }
     };
 
-    const stopRecording = () => {
-        mediaRecorder.current?.stop();
-    };
+    useEffect(() => {
+        const handleSave = () => {
+            const downloadLink = document.createElement('a');
+            const fileName = 'react-screen-capture.png';
 
-    const captureScreenshot = () => {
-        if (!videoRef.current) return;
+            downloadLink.href = screenCapture;
+            downloadLink.download = fileName;
+            downloadLink.click();
+        };
 
-        const canvas = document.createElement('canvas');
-        canvas.width = videoRef.current.videoWidth;
-        canvas.height = videoRef.current.videoHeight;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
-        canvas.toBlob((blob) => {
-            if (!blob) return;
-
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'screenshot.png';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-        });
-    };
+        if (screenCapture) {
+            handleSave();
+        }
+    }, [screenCapture]);
 
     return (
         <div className={styles.background}>
@@ -79,18 +49,8 @@ function AGVvideoFeed({ camUrl }: cctvCamfeedProps) {
             </div>
             <div className={styles.contentWrapper}>
                 <div className={styles.background2}>
-                    <video
-                        id="browser_video"
-                        className={styles.video_image}
-                        src={camUrl}
-                        ref={videoRef}
-                        autoPlay
-                    />
-                </div>
-                <div className={styles.buttonsbox}>
-                    <button className={styles.startrecord} onClick={captureScreenshot}>Capture</button>
-                    <button className={styles.startrecord} onClick={startRecording}>Start Recording</button>
-                    <button className={styles.startrecord} onClick={stopRecording}>Stop Recording</button>
+                    <img src={camUrl} alt='video' className={styles.video_image} />
+                    <Button onClick={handleScreenCapture} className={styles.startrecord}>Capture</Button>
                 </div>
             </div>
         </div>
@@ -98,3 +58,116 @@ function AGVvideoFeed({ camUrl }: cctvCamfeedProps) {
 };
 
 export default AGVvideoFeed;
+
+
+
+
+
+// ----------------- Not working using ScreenCapture module.
+
+// import { FunctionComponent, useCallback, useState } from "react";
+// import { Button } from "@mui/material";
+// import styles from "./AGVvideo.module.css";
+// import { ScreenCapture } from "react-screen-capture"; // Import the ScreenCapture component
+// import { useEffect } from "react";
+
+// interface cctvCamfeedProps {
+//     camUrl: string;
+// }
+
+// function AGVvideoFeed({ camUrl }: cctvCamfeedProps) {
+//     const [screenCapture, setScreenCapture] = useState<string>('');
+
+//     const handleScreenCapture = (base64Source: string) => {
+//         setScreenCapture(base64Source);
+//         return null;
+//     };
+
+//     useEffect(() => {
+//         const handleSave = () => {
+//             const downloadLink = document.createElement('a');
+//             const fileName = 'react-screen-capture.png';
+
+//             downloadLink.href = screenCapture;
+//             downloadLink.download = fileName;
+//             downloadLink.click();
+//         };
+
+//         if (screenCapture) {
+//             handleSave();
+//         }
+//     }, [screenCapture]);
+
+//     return (
+//         <div className={styles.background}>
+//             <div className={styles.background1}>
+//                 <div className={styles.notifications}>
+//                     <h3 className={styles.FeedTitle}>AGV IR Camera Feed</h3>
+//                 </div>
+//             </div>
+//             <div className={styles.contentWrapper}>
+//                 <div className={styles.background2}>
+//                     <ScreenCapture onEndCapture={handleScreenCapture}>
+//                         {({ onStartCapture }: { onStartCapture: () => null }) => (
+//                             <div>
+//                                 <button onClick={onStartCapture} className={styles.startrecord}>Capture</button>
+//                                 <img src={camUrl} alt='video' className={styles.video_image} />
+//                             </div>
+//                         )}
+//                     </ScreenCapture>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default AGVvideoFeed;
+
+
+
+// -----------------  working code : 
+
+// import { FunctionComponent, useCallback, useState } from "react";
+// import { Button } from "@mui/material";
+// import styles from "./AGVvideo.module.css";
+// import { Link } from "react-router-dom";
+// import Livestock from "../../pages/Livestock";
+
+
+// interface cctvCamfeedProps {
+//     camUrl: string;
+// }
+
+// function AGVvideoFeed({ camUrl }: cctvCamfeedProps) {
+//     const onTablesContainerClick = useCallback(() => {
+//         // Please sync "LiveStock Tab" to the project
+//     }, []);
+
+//     const onViewAllClick = useCallback(() => {
+//         // Please sync "CCTV Tab" to the project
+//     }, []);
+//     const [showMore, setShowMore] = useState(false);
+
+//     return (
+//         <div className={styles.background}>
+//             <div className={styles.background1}>
+//                 <div className={styles.notifications}>
+//                     <h3 className={styles.FeedTitle}>AGV IR Camera Feed</h3>
+//                 </div>
+//             </div>
+//             <div className={styles.contentWrapper}>
+//                 <div className={styles.background2} >
+//                     {/* <img id="browser_video" className={styles.video_image} alt="video" src={camUrl} style={{ clipPath: 'inset(3% 12% 0 17%)' }} /> */}
+//                     <img id="browser_video" className={styles.video_image} alt="video" src={camUrl} />
+//                 </div>
+//                 <div className={styles.buttonsbox}>
+//                     <button className={styles.startrecord}>Capture</button>
+//                     <button className={styles.startrecord}>Start Recording</button>
+//                     <button className={styles.startrecord}>Start Recording</button>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default AGVvideoFeed;
