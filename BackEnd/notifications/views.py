@@ -47,7 +47,7 @@ def notification_post(request):
 def notification_get(request):
     if request.method == 'GET':
         latest_notification = notificationData.objects.order_by('-timestamp').first()
-        print("---------------- The Device from which message come is : ", latest_notification.Device)
+        # print("---------------- The Device from which message come is : ", latest_notification.Device)
         if latest_notification:
             notification_data = {
                 'timestamp': latest_notification.timestamp,

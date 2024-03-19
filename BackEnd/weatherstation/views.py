@@ -82,53 +82,44 @@ def get_rainfall(request):
 @csrf_exempt
 def get_windspeed(request):
     # Query the latest 10 wind speed values from the database
-    latest_windspeed = WeatherData.objects.order_by('-id')[:10].values('WindSpeed')
+    latest_windspeed = WeatherData.objects.order_by('-id')[:10].values('wind_speed')
     # Convert QuerySet to a list of dictionaries
     windspeed_list = list(latest_windspeed)
     # Return the JSON response
     return JsonResponse(windspeed_list, safe=False)
 
 
+from .models import WeatherData
+
 @csrf_exempt
 def weather_view(request):
-    global stored_data
-    # stored_data = {
-    #     "temperature": 36.277134529488265,
-    #     "humidity": 50.862129842405324,
-    #     "activity": "walking"
-    # }
+    try:
+        # Get the latest weather data row from the database
+        latest_weather_data = WeatherData.objects.latest('id')
+        weather_data = {
+            'temperature': latest_weather_data.temperature,
+            'humidity': latest_weather_data.humidity,
+            'pressure': latest_weather_data.pressure,
+            'wind_speed': latest_weather_data.wind_speed,
+            'wind_direction': latest_weather_data.wind_direction,
+            'rain_gauge': latest_weather_data.rain_gauge,
+            'running_time': latest_weather_data.running_time,
+            'mag_x': latest_weather_data.mag_x,
+            'mag_y': latest_weather_data.mag_y,
+            'mag_z': latest_weather_data.mag_z,
+            'mag_strength': latest_weather_data.mag_strength,
+            'acc_x': latest_weather_data.acc_x,
+            'acc_y': latest_weather_data.acc_y,
+            'acc_z': latest_weather_data.acc_z,
+            'acc_strength': latest_weather_data.acc_strength
+        }
+        return JsonResponse({'weather_data': weather_data})
+    except WeatherData.DoesNotExist:
+        return JsonResponse({'error': 'No weather data available'})
 
-    # Check if data has been received before
-    if stored_data:
-        # Return the stored data as a JSON response
-        return JsonResponse({'livestock_data': stored_data})
-    else:
-        return JsonResponse({'error': 'No data available'})
 
 import random
 import time
-
-@csrf_exempt
-def notification(request):
-    notifications = [
-        "Cow 113 went offline at location: Map",
-        "Two People detected on Camera 3",
-        "A wild animal detected on Camera 7"
-    ]
-    
-    if request.method == 'GET':
-        # Return a random notification
-        notification = random.choice(notifications)
-        return JsonResponse({'notification': notification})
-    
-    return JsonResponse({'error': 'Invalid request method'})
-
-# # Schedule to send notifications every 5 minutes
-# while True:
-#     notification_time = 5 * 60  # 5 minutes in seconds
-#     time.sleep(notification_time)
-#     # Call the notification function to send a notification
-#     notification(None)
 
 
 @csrf_exempt

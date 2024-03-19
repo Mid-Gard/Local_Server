@@ -6,6 +6,5 @@ urlpatterns = [
     path('weather_get/',views.weather_get),
     path('test_post/', views.test_post),
     path('get_rainfall/', views.get_rainfall),
-    path('get_windspeed/', views.get_windspeed),
-    path('notification/', views.notification)
+    path('get_windspeed/', views.get_windspeed)
 ]
