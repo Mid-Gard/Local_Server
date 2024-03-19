@@ -1,3 +1,28 @@
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: var(--secondary-primary-white);
+  align-items: center;
+  justify-content: center;
+  letter-spacing: normal;
+}
+
+.background {
+  flex: 1 1;
+  background: linear-gradient(159.02deg, rgba(25, 169, 134, 0.85), #194911 52.6%, #177e06 52.61%, #112f16 91.15%, #126415);
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* padding: var(--padding-mid) var(--padding-mini) var(--padding-mid) var(--padding-2xl); */
+  padding: 1em;
+  box-sizing: border-box;
+  gap: 10px;
+  max-width: 100%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
 .backgroundChild {
   height: 1080px;
   width: 1920px;
@@ -62,30 +87,48 @@
   justify-content: flex-start;
 }
 
-.background {
-  flex: 1 1;
-  background: linear-gradient(159.02deg, rgba(25, 169, 134, 0.85), #194911 52.6%, #177e06 52.61%, #112f16 91.15%, #126415);
-  align-items: flex-start;
+.livestockFrameParent {
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
-  /* padding: var(--padding-mid) var(--padding-mini) var(--padding-mid) var(--padding-2xl); */
-  padding: 1em;
-  box-sizing: border-box;
-  gap: 10px;
-  max-width: 100%;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
+  flex: 1;
+  align-items: flex-start;
+  gap: var(--gap-xs);
+  max-width: calc(100% - 279px);
 }
 
-.dashboard {
-  width: 100%;
-  height: 100vh;
+.livestockBody {
   position: relative;
-  background-color: var(--secondary-primary-white);
-  align-items: center;
-  justify-content: center;
-  letter-spacing: normal;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: var(--gap-xs);
 }
+
+.livestockLeftSection {
+  height: 94vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.livestockmap {
+  height: 70%;
+}
+
+.livestockRightSection {
+  height: 94vh;
+  width: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.notificationbox {
+  align-self: center;
+}
+
 
 @media screen and (max-width: 1125px) {
   .iconFrame {

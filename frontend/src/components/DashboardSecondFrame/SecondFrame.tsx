@@ -10,6 +10,7 @@ import DashBoard from "../../pages/DashBoard";
 import DashboardLivetock from "../DashboardLivestock/DashboardLivestock"
 import DashboardWeatherCard from "../DashboardWeatherCard/DashboardWeatherCard";
 import DashboardWeatherForecast from "../DashboardWeatherForecast/DashboardWeatherForecast";
+import WindGraph from "../WindGraph/WindGraph";
 
 // Define the type for location objects
 interface Location {
@@ -68,60 +69,8 @@ const SecondFrame: FunctionComponent = () => {
           <DashboardWeatherCard />
           <DashboardWeatherForecast />
         </div>
-        <div className={styles.background1}>
-          <div className={styles.DashboardThirdFrameInchesFrame}>
-            <div className={styles.viewAllFrame}>
-              <h3 className={styles.DashboardThirdFrameInches}>DashboardThirdFrame (inches)</h3>
-              <div className={styles.icon2} onClick={onIconContainerClick}>
-                <div className={styles.vectorParent}>
-                  <img
-                    className={styles.frameChild}
-                    alt=""
-                    src="/rectangle-3.svg"
-                  />
-                  <h3 className={styles.monthwiseReport}> Monthwise Report</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.tablerlayoutsidebarLinesParent}>
-            <div className={styles.tablerlayoutsidebarLines}>
-              <div className={styles.aMFrame}>
-                <div className={styles.pMFrame}>
-                  <b className={styles.humidityGraph}>5</b>
-                  <b className={styles.humidityGraph1}>4</b>
-                  <b className={styles.humidityGraph2}>3</b>
-                  <b className={styles.humidityGraph3}>2</b>
-                  <b className={styles.humidityGraph4}>1</b>
-                  <b className={styles.humidityGraph5}>0</b>
-                </div>
-                <div className={styles.frameParent}>
-                  <div className={styles.linesParent}>
-                    <img className={styles.linesIcon} alt="" src="/lines.svg" />
-                    <img
-                      className={styles.frameItem}
-                      alt=""
-                      src="/group-7068.svg"
-                    />
-                  </div>
-                  <div className={styles.tablerlayoutSidebarParent}>
-                    <img
-                      className={styles.tablerlayoutSidebarIcon}
-                      loading="eager"
-                      alt=""
-                      src="/tablerlayoutsidebar.svg"
-                    />
-                    <img
-                      className={styles.linesIcon1}
-                      alt=""
-                      src="/lines-1.svg"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <WindGraph />
+
       </div>
       <div className={styles.framesecondcard}>
         <DashboardLivetock />

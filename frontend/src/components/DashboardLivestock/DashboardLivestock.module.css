@@ -3,7 +3,7 @@
 .cattleBehaviorWrapper {
     display: flex;
     justify-content: flex-start;
-    max-width: 100%;
+    min-width: 100%;
 }
 
 .background2 {
@@ -23,6 +23,11 @@
     font-size: var(--font-size-lg);
     color: var(--secondary-primary-white);
     font-family: var(--font-abhaya-libre);
+}
+
+.livestockmap {
+    height: 35vh;
+    min-width: 100%;;
 }
 
 @media screen and (max-width: 1325px) {

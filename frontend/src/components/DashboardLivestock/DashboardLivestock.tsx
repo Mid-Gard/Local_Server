@@ -18,7 +18,9 @@ const SecondFrame: FunctionComponent = () => {
 
     return (
         <div className={styles.background2}>
-            <LivestockMap />
+            <div className={styles.livestockmap}>
+                <LivestockMap />
+            </div>
             <div className={styles.cattleBehaviorWrapper}>
                 <div className={styles.cattleBehavior}>
                     <div className={styles.cCTVFrame}>

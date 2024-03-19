@@ -15,7 +15,7 @@ function NotificationBox() {
             try {
                 const response = await fetch('http://192.168.0.186:8000/notifications/notification_get/');
                 const data: Notification = await response.json();
-                console.log(data); // Log the received data to inspect its structure
+                // console.log(data); // Log the received data to inspect its structure
 
                 // Check if the fetched notification is different from the last displayed one
                 if (notifications.length === 0 || data.timestamp !== notifications[0].timestamp) {

@@ -7,7 +7,8 @@ import TopBar from "../components/TopBar/TopBar";
 
 const UAV: FunctionComponent = () => {
 
-    const camUrl = 'http://192.168.0.133:5000/video_feed';
+    // const camUrl = 'http://192.168.0.133:5000/video_feed';
+    const camUrl = 'http://proxy61.rt3.io:37759/video_feed';
     return (
         <div className={styles.dashboard}>
             <main className={styles.background}>

@@ -99,6 +99,10 @@
   z-index: 3;
 }
 
+.framesecondcard {
+  min-height: 100%;
+}
+
 .combinedHumidityFrom,
 .title {
   position: relative;
@@ -262,85 +266,19 @@
   display: none;
 }
 
-.DashboardThirdFrameInches {
-  margin: 0;
-  height: 16.9px;
-  width: 351.2px;
-  position: relative;
-  font-size: inherit;
-  line-height: 140%;
-  font-weight: 600;
-  font-family: inherit;
-  display: inline-block;
-  flex-shrink: 0;
-  max-width: 100%;
-  z-index: 4;
-}
 
-.frameChild {
-  height: 34.8px;
-  width: 168.6px;
-  position: relative;
-  border-radius: var(--br-xs);
-  display: none;
-}
 
-.monthwiseReport {
-  margin: 0;
-  flex: 1;
-  position: relative;
-  font-size: inherit;
-  line-height: 100%;
-  font-weight: 600;
-  font-family: inherit;
-  z-index: 1;
-}
 
-.icon2,
-.vectorParent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
-.vectorParent {
-  flex: 1;
-  border-radius: var(--br-xs);
-  background-color: var(--color-royalblue);
-  box-shadow: 0 3.5px 5.5px rgba(0, 0, 0, 0.02);
-  padding: var(--padding-6xs) var(--padding-10xs) var(--padding-2xs);
-  white-space: nowrap;
-}
 
-.icon2 {
-  width: 169px;
-  cursor: pointer;
-  z-index: 4;
-  text-align: center;
-}
 
-.DashboardThirdFrameInchesFrame,
-.viewAllFrame {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  max-width: 100%;
-}
 
-.viewAllFrame {
-  flex: 1;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
 
-.DashboardThirdFrameInchesFrame {
-  align-self: stretch;
-  justify-content: flex-start;
-  padding: 0 var(--padding-12xl) 0 var(--padding-lg);
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
+
+
+
+
+
 
 .humidityGraph,
 .humidityGraph1 {
@@ -749,22 +687,6 @@
   flex-direction: column;
   justify-content: flex-start;
   max-width: 100%;
-}
-
-.background1 {
-  align-self: stretch;
-  border-radius: var(--br-xl);
-  background: linear-gradient(126.97deg,
-      rgba(12, 47, 0, 0.74),
-      rgba(0, 65, 57, 0.71));
-  backdrop-filter: blur(120px);
-  align-items: flex-end;
-  padding: var(--padding-mid) var(--padding-10xs) var(--padding-2xl);
-  box-sizing: border-box;
-  gap: var(--gap-11xl);
-  z-index: 3;
-  font-size: var(--font-size-lg);
-  color: var(--secondary-primary-white);
 }
 
 .framefirstcard {
