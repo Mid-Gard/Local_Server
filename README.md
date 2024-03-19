@@ -1,3 +1,5 @@
+### This is a NextJS branch. The codebase is created from scratch.
+
 # How to run
 
 1. Go in the BackEnd folder : ```cd BackEnd```

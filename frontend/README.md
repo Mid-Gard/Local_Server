@@ -4,13 +4,15 @@ Welcome to the Smart Farm Webapp project by Midgard! This is a webapp which serv
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Updates](#updates)
-- [Wireframe & Design](#wireframe-and-design)
-- [Setting Up](#setting-up)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-  - [How to Contribute](#how-to-contribute)
+- [Smart Farm Webapp](#smart-farm-webapp)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Updates](#updates)
+  - [Wireframe and Design](#wireframe-and-design)
+  - [Screenshots](#screenshots)
+  - [Setting Up](#setting-up)
+  - [Contributing](#contributing)
+    - [How to Contribute](#how-to-contribute)
 
 ## Introduction
 
@@ -24,9 +26,9 @@ We have moved the `next-ts` branch into the `main`. So the current project is us
 
 Our project's blueprint and structural planning are currently in progress through live collaboration on Excalidraw. Excalidraw provides a dynamic environment for team members to collectively sketch out the website's layout, sections, and content flow.
 
-✏ Wireframe and planning : [Excalidraw wireframe](https://excalidraw.com/#room=f19ff3afd8e416e95810,tv_zFrb4YpiwFHOx7NKKgg)
+✏ Wireframe and planning : [Excalidraw wireframe]()
 
-🖌️ Design Link: [Figma](https://www.figma.com/file/STlnToD2u2sJWXNBqOrJNi/BE-Project-WebApp-Design?type=design&node-id=0%3A1&mode=design&t=i23QYSfISbNaLHI5-1)
+🖌️ Design Link: [Figma]()
 
 Any suggestions on the UI/UX for the website will be highly appreciated.
 
@@ -49,7 +51,7 @@ Cloning and installing this repo should install typescript locally but if you wi
 2. Clone this repo
 
    ```bash
-   git clone https://github.com/Engicos-Coders-Club/club-official-website.git
+   git clone 
    ```
 
 3. Once switched, install the necessary packages by using this command
