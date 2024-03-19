@@ -6,6 +6,7 @@ from .models import WeatherData
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+import random
 
 @csrf_protect 
 def weather_api(request):
@@ -21,42 +22,41 @@ def weather_api(request):
 # Global variable to store received data
 stored_data = None
 
+import json
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import WeatherData
+
 @csrf_exempt
 def weather_get(request):
-    global stored_data
     if request.method == 'POST':
         received_data = json.loads(request.body.decode('utf-8'))
         weather_data = received_data.get('weather_data', {})
-        # received_data = json.loads(request.body)
-        print(" \n")
-        print("Received data:", received_data)
-        print("\n")
+        print("\nReceived data:", received_data)
 
-        # Store the received data in the global variable
-        stored_data = received_data
-        
-        # weather_data = json.loads(received_data['weather_data'])
-        
-        print(weather_data['temperature'])
-        
         # Save the data to the database
         WeatherData.objects.create(
-            id=weather_data['id'],
-            temperature = weather_data['temperature'],
-            humidity = weather_data['humidity'],
-            Pressure = weather_data['Pressure'],
-            LightLevel = weather_data['LightLevel'],
-            SoilMoisture = weather_data['SoilMoisture'],
-            SoilTemp = weather_data['SoilTemp'],
-            WindSpeed = weather_data['WindSpeed'],
-            WindDirection = weather_data['WindDirection'],
-            RainGuage = weather_data['RainGuage'],
-            Altitude = weather_data['Altitude']
+            temperature=weather_data.get('temperature', None),
+            humidity=weather_data.get('humidity', None),
+            pressure=weather_data.get('pressure', None),
+            wind_speed=weather_data.get('wind_speed', None),
+            wind_direction=weather_data.get('wind_direction', None),
+            rain_gauge=weather_data.get('rain_gauge', None),
+            running_time=weather_data.get('runningTime', None),
+            mag_x=weather_data.get('mag_x', None),
+            mag_y=weather_data.get('mag_y', None),
+            mag_z=weather_data.get('mag_z', None),
+            mag_strength=weather_data.get('mag_strength', None),
+            acc_x=weather_data.get('acc_x', None),
+            acc_y=weather_data.get('acc_y', None),
+            acc_z=weather_data.get('acc_z', None),
+            acc_strength=weather_data.get('acc_strength', None)
         )
 
         return JsonResponse({'status': 'Data received successfully'})
     else:
         return JsonResponse({'error': 'Invalid request method'})
+
 
 
 from django.http import JsonResponse
@@ -66,7 +66,7 @@ from .models import WeatherData
 def get_rainfall(request):
     # Enable the below code for Testing :
     
-    dummy_rainfall = [{'RainGuage': random.uniform(0, 50)} for _ in range(10)]
+    dummy_rainfall = [{'RainGuage': random.uniform(30, 40)} for _ in range(10)]
     # Return the dummy rainfall data as JSON response
     return JsonResponse(dummy_rainfall, safe=False)
     
@@ -104,6 +104,31 @@ def weather_view(request):
         return JsonResponse({'livestock_data': stored_data})
     else:
         return JsonResponse({'error': 'No data available'})
+
+import random
+import time
+
+@csrf_exempt
+def notification(request):
+    notifications = [
+        "Cow 113 went offline at location: Map",
+        "Two People detected on Camera 3",
+        "A wild animal detected on Camera 7"
+    ]
+    
+    if request.method == 'GET':
+        # Return a random notification
+        notification = random.choice(notifications)
+        return JsonResponse({'notification': notification})
+    
+    return JsonResponse({'error': 'Invalid request method'})
+
+# # Schedule to send notifications every 5 minutes
+# while True:
+#     notification_time = 5 * 60  # 5 minutes in seconds
+#     time.sleep(notification_time)
+#     # Call the notification function to send a notification
+#     notification(None)
 
 
 @csrf_exempt
