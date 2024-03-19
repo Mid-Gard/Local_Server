@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'livestock',
     'weatherstation',
     'agv',
+    'notifications',
+    'soildevice',
 ]
 
 MIDDLEWARE = [

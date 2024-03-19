@@ -154,8 +154,8 @@ This is a basic setup, and you may need to adjust it based on your specific requ
 
 2. *For integratiing Database*
 
-The database was not starting, so i had to add the table myself with all the individual columns. then only the error got solved and the data started adding.
-Otherwise it was showing error that the column not found
+    The database was not starting, so i had to add the table myself with all the individual columns. then only the error got solved and the data started adding.
+    Otherwise it was showing error that the column not found
 
 ```
 CREATE TABLE "AGV_Rover_agvRoverData" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "Timestamp" datetime NOT NULL, "lat" real NOT NULL, "lon" real NOT NULL)
@@ -176,3 +176,27 @@ CREATE TABLE "livestock_LivestockData" (
 ```
 CREATE TABLE "weatherstation_weatherdata" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "temperature" real NOT NULL, "humidity" real NOT NULL, "Pressure" real NOT NULL, "LightLevel" real NOT NULL, "SoilMoisture" real NOT NULL, "SoilTemp" real NOT NULL, "WindSpeed" real NOT NULL, "RainGuage" real NOT NULL, "Altitude" real NOT NULL, "WindDirection" varchar(5) NOT NULL)
 ```
+
+
+
+3. So i could able to do the Weather database just now, is :
+    1. I just wrote the correct code in the models.py file
+    2. Then i ran the two migration commands
+    3. Then i ran, so i get no database with that name error. So in future, delete that secific table.
+    4. So from the DBViewer i created the new table with correct columns and their types, write the changes, then run the server again.
+    5. Done!
+
+
+
+
+## Okay fuckk i think i solved the problem, why new tables were not getting created, even after running the migration commnads
+
+Basically, for whichever the tables were not getting created : 
+
+1. open that API/StartApp
+2. Inside this folder, created the 'migrations' folder which surely must not be there.
+3. Then inside that migrations folder created the file '__init__.py'
+4. After this run the migration commands : 
+```python manage.py makemigrations```
+
+```python manage.py migrate```

@@ -26,7 +26,9 @@ urlpatterns = [
     # path('livestock/',views.livestock, name='livestock'),
     path('livestock/', include('livestock.urls')),
     path('weatherstation/', include('weatherstation.urls')),
-    path('agv_rover/', include('agv.urls'))
+    path('agv_rover/', include('agv.urls')),
+    path('notifications/', include('notifications.urls')),
+    path('soildevice/', include('soildevice.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
