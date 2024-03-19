@@ -12,6 +12,8 @@ import Weather from "./pages/Weather";
 import Actuators from "./pages/Actuators";
 import AGV from "./pages/AGV";
 import UAV from "./pages/UAV";
+import Profile from "./pages/Profile";
+import Farmers from "./pages/Farmers";
 
 function App() {
   const action = useNavigationType();
@@ -58,6 +60,8 @@ function App() {
       <Route path="/actuators" element={<Actuators />} />
       <Route path="/agv" element={<AGV />} />
       <Route path="/uav" element={<UAV />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/farmers" element={<Farmers />} />
     </Routes>
   );
 }
