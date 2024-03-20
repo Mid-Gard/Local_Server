@@ -209,7 +209,7 @@
 
 .DashboardThirdFrame {
   flex-direction: row;
-  min-height: 34vh;
+  min-height: 28vh;
   min-width: -webkit-fill-available;
   display: flex;
   flex-wrap: nowrap;

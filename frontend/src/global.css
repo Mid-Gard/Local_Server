@@ -40,7 +40,7 @@ body {
   --gap-xl: 20px;
   --gap-11xs: 2px;
   --gap-base: 16px;
-  --gap-7xl: 26px;
+  --gap-7xl: 1rem;
   --gap-5xs: 8px;
   --gap-6xl: 25px;
   --gap-7xs: 6px;
@@ -57,7 +57,7 @@ body {
   --gap-smi: 13px;
   --gap-lgi: 19px;
   --gap-3xl: 22px;
-  --gap-174xl: 193px;
+  --gap-174xl: 2rem;
   --gap-mid: 17px;
   --gap-20xl: 39px;
   --gap-sm: 14px;

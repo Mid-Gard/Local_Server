@@ -39,32 +39,28 @@ const SecondFrame: FunctionComponent = () => {
               alt=""
               src="/background-1@2x.png"
             />
-            <div className={styles.markJohnson}>
+            <div className={styles.textbox}>
               <div className={styles.welcomeback}>
-                <div className={styles.welcomeBack}>Welcome back,</div>
-                <h1 className={styles.markJohnson1}>Mark Johnson</h1>
+                <div className={styles.cardtext}>Welcome back,</div>
+                <h1 className={styles.username}>Mark Johnson</h1>
+                <div className={styles.cardtext}>Analyze the past data and reports.</div>
               </div>
             </div>
             <div className={styles.iconFrameArrowNodes}>
-              <div className={styles.analyzeThePast}>
-                Analyze the past data and reports.
-              </div>
+              <Button
+                className={styles.reportbtn}
+                variant="contained"
+                sx={{
+                  textTransform: "none",
+                  color: "#fff",
+                  fontSize: "18",
+                  background: "#0075ff",
+                  borderRadius: "12.000000953674316px",
+                  "&:hover": { background: "#0075ff" },
+                }}
+                onClick={onIconClick}
+              >Reports</Button>
             </div>
-            <Button
-              className={styles.icon}
-              variant="contained"
-              sx={{
-                textTransform: "none",
-                color: "#fff",
-                fontSize: "18",
-                background: "#0075ff",
-                borderRadius: "12.000000953674316px",
-                "&:hover": { background: "#0075ff" },
-                width: 124,
-                height: 30,
-              }}
-              onClick={onIconClick}
-            >{`Reports ->`}</Button>
           </div>
           <DashboardWeatherCard />
           <DashboardWeatherForecast />

@@ -14,11 +14,12 @@
   border-radius: 1.5rem;
 }
 
-.markJohnson1,
+.username,
 .welcomeBack {
   position: relative;
   line-height: 100%;
   z-index: 1;
+  font-size: 3rem;
 }
 
 .welcomeBack {
@@ -27,17 +28,15 @@
   flex-shrink: 0;
 }
 
-.markJohnson1 {
+.username {
   margin: 0;
   flex: 1;
-  font-size: var(--font-size-9xl);
   font-weight: 600;
   font-family: inherit;
   color: var(--secondary-primary-white);
 }
 
-.markJohnson,
-.welcomeback {
+.textbox {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -47,39 +46,41 @@
   align-self: stretch;
   flex-direction: column;
   gap: var(--gap-5xs);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.markJohnson {
-  height: 35px;
+.textbox {
+  height: 80%;
   flex-direction: row;
   padding: 0 var(--padding-10xs);
   box-sizing: border-box;
 }
 
-.analyzeThePast {
+.cardtext {
   height: 72px;
-  flex: 1;
+  font-size: 1.5rem;
+  flex: 1 1;
   position: relative;
   line-height: 24px;
-  display: inline-block;
   z-index: 1;
-}
-
-.iconFrameArrowNodes {
-  width: 164px;
+  width: 70%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
   padding: 0 var(--padding-10xs);
   box-sizing: border-box;
 }
 
-.icon {
-  width: 124px;
-  height: 30.3px;
+.reportbtn {
+  width: 12rem;
+  height: 3rem;
   cursor: pointer;
   z-index: 1;
+  border-radius: 1rem;
+  font-size: 1.5rem;
 }
 
 .firstCard {
@@ -922,7 +923,7 @@
 @media screen and (max-width: 450px) {
 
   .livestockBehaviorFrame,
-  .markJohnson1 {
+  .username {
     font-size: var(--font-size-3xl);
     line-height: 22px;
   }
