@@ -72,7 +72,7 @@
 }
 .backgroundParent {
   align-self: stretch;
-  height: 208px;
+  height: 20vh;
   padding: var(--padding-lgi);
   box-sizing: border-box;
   position: relative;

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: flex-start;
     max-width: 100%;
-    min-width: max-content;
+    min-width: 19vw;
 }
 
 .NotificationBox {
