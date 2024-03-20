@@ -225,12 +225,26 @@
 }
 
 .weatherreportcard {
+    min-height: 100%;
+    align-self: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.weathercardimg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* .maincontent {
     border-radius: var(--br-xl);
     background: linear-gradient(126.97deg, rgba(12, 47, 0, 0.74), rgba(0, 65, 57, 0.71));
     -webkit-backdrop-filter: blur(120px);
     backdrop-filter: blur(120px);
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: var(--padding-xs) 14.880035400390625px var(--padding-xs) var(--padding-mini);
     box-sizing: border-box;
     gap: var(--gap-5xs);
@@ -238,4 +252,4 @@
     font-size: var(--font-size-lg);
     color: var(--secondary-primary-white);
     font-family: var(--font-roboto-flex);
-}
+} */

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Plot from 'react-plotly.js';
+// import Plot from 'react-plotly.js';
 import Plotly from 'plotly.js'; // Import Plotly from plotly.js
+import styles from "./WindGraph.module.css";
 
 // Define the interface for the weather data
 interface WeatherData {
@@ -56,9 +57,15 @@ const WindGraph = () => {
 
     return (
         <div>
-            <Plot
+            {/* <Plot
                 data={plotData}
                 layout={{ width: 1000, height: 240, title: 'Real-time Weather Data' }}
+            /> */}
+            <img
+                className={styles.windgraphImg}
+                loading="eager"
+                alt=""
+                src="/WindGraph.png"
             />
         </div>
     );

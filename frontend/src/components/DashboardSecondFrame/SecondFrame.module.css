@@ -92,9 +92,8 @@
   box-sizing: border-box;
   position: relative;
   gap: var(--gap-smi);
-  /* min-width: 424px; */
+  min-width: 37%;
   /* max-width: 100%; */
-  max-width: -moz-fit-content;
   max-width: 35%;
   z-index: 3;
 }
@@ -250,7 +249,7 @@
 .background {
   align-self: stretch;
   flex-direction: row;
-  gap: var(--gap-lg);
+  gap: var(--gap-4xl);
   max-width: 100%;
 }
 
@@ -871,7 +870,6 @@
 .SecondFrame {
   align-self: stretch;
   flex-direction: row;
-  align-items: flex-end;
   gap: var(--gap-5xs);
   text-align: left;
   font-size: var(--font-size-sm);

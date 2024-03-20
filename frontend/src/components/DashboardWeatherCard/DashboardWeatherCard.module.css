@@ -225,6 +225,20 @@
 }
 
 .weatherreportcard {
+    min-height: 100%;
+    align-self: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.weathercardimg {
+    height: 100%;
+    width: 98%;
+    object-fit: contain;
+}
+
+/* .maincontent {
     border-radius: var(--br-xl);
     background: linear-gradient(126.97deg, rgba(12, 47, 0, 0.74), rgba(0, 65, 57, 0.71));
     -webkit-backdrop-filter: blur(120px);
@@ -238,4 +252,4 @@
     font-size: var(--font-size-lg);
     color: var(--secondary-primary-white);
     font-family: var(--font-roboto-flex);
-}
+} */

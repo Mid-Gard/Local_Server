@@ -1,7 +1,7 @@
 /* Sidebar.module.css */
 .sidebar {
   padding: var(--padding-8xl) var(--padding-8xs) var(--padding-18xl);
-  height: 76vh;
+  min-height: 78vh;
   text-align: left;
   font-size: var(--font-size-base);
   color: var(--secondary-primary-white);
@@ -46,6 +46,8 @@
 .sidbarLinks {
   display: flex;
   flex-direction: column;
+  min-height: 93%;
+  justify-content: space-between;
 }
 
 .background,
@@ -577,7 +579,8 @@
 }
 
 .livestockOutsideFrame {
-  flex: 1;
+  flex: 1 1;
+  align-self: stretch;
   flex-direction: column;
   gap: var(--gap-mid);
 }

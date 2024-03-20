@@ -1,3 +1,5 @@
+// I have commented the css of the maincontent div for now to show the image, afterwards uncomment it back
+
 import { FunctionComponent, useCallback, useState } from "react";
 import { Button } from "@mui/material";
 import styles from "./DashboardWeatherCard.module.css";
@@ -16,7 +18,14 @@ function DashboardWeatherCard() {
 
     return (
         <div className={styles.weatherreportcard}>
-            <div className={styles.frame}>
+            <img
+                className={styles.weathercardimg}
+                loading="eager"
+                alt=""
+                src="/DashboardWeatherCard.png"
+            />
+            <div className={styles.maincontent}>   
+                {/* <div className={styles.frame}>
                 <div className={styles.title}>Weather Report</div>
                 <div className={styles.seeallbutton}>
                     <div className={styles.wrapperRectangle3}>
@@ -64,6 +73,7 @@ function DashboardWeatherCard() {
                         </div>
                     </div>
                 </div>
+            </div> */}
             </div>
         </div>
     );

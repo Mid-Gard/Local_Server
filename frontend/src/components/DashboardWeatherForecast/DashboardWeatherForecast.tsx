@@ -1,8 +1,7 @@
+// I have commented the css of the maincontent div for now to show the image, afterwards uncomment it back
+
 import { FunctionComponent, useCallback, useState } from "react";
-import { Button } from "@mui/material";
 import styles from "./DashboardWeatherForecast.module.css";
-import { Link } from "react-router-dom";
-import Livestock from "../../pages/Livestock";
 
 function DashboardWeatherForecast() {
     const onTablesContainerClick = useCallback(() => {
@@ -16,8 +15,15 @@ function DashboardWeatherForecast() {
 
     return (
         <div className={styles.weatherreportcard}>
-            <div className={styles.frame}>
-                <div className={styles.title}>Goggle Weather Forecast</div>
+            <img
+                className={styles.weathercardimg}
+                loading="eager"
+                alt=""
+                src="/DashboardWeatherForecast.png"
+            />
+            <div className={styles.maincontent}>
+                {/* <div className={styles.frame}>
+                <div className={styles.title}>Weather Report</div>
                 <div className={styles.seeallbutton}>
                     <div className={styles.wrapperRectangle3}>
                         <img
@@ -64,6 +70,7 @@ function DashboardWeatherForecast() {
                         </div>
                     </div>
                 </div>
+            </div> */}
             </div>
         </div>
     );

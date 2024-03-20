@@ -25,7 +25,7 @@ const Livestock: FunctionComponent = () => {
                                 <LivestockMap />
                             </div>
                             <div className={styles.livestockgraph}>
-
+                                
                             </div>
                         </div>
                         <div className={styles.livestockRightSection}>
