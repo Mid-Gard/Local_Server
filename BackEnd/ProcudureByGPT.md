@@ -200,3 +200,7 @@ Basically, for whichever the tables were not getting created :
 ```python manage.py makemigrations```
 
 ```python manage.py migrate```
+
+
+
+Sometimes even after the above procedure the table does get created, inspite of it says, it has updated the correspondig API startapp. In this case you have to create the table with its corresponding values manually.
