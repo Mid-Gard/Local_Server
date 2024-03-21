@@ -18,6 +18,46 @@ def agv(request):
         return JsonResponse(list(data), safe=False)
 
 
+@csrf_exempt
+def data_post(request):
+    if request.method == 'POST':
+        received_data = json.loads(request.body)
+        print(received_data)
+        movement_data = json.loads(received_data['Movement_data'])  # Corrected key name
+        print(" \n")
+        print("Movement data: ", movement_data)
+        print("\n")
+
+        try:
+            # Create a new instance of agvRoverData and save it to the database
+            agv_rover_data = agvRoverData.objects.create(
+                lat=movement_data.get('latitude'),
+                lon=movement_data.get('longitude'),
+                pitch=movement_data.get('pitch_degrees'),
+                roll=movement_data.get('roll_degrees'),
+                yaw=movement_data.get('yaw_degrees')
+            )
+            agv_rover_data.save()
+            return JsonResponse({'status': 'Data received and saved successfully'})
+        except KeyError as e:
+            return JsonResponse({'error': f'Key error: {e}'}, status=400)
+        except Exception as e:
+            return JsonResponse({'error': f'Failed to save data: {str(e)}'}, status=500)
+
+
+
+@csrf_exempt
+def battery_post(request):
+    if request.method == 'POST':
+        received_data = json.loads(request.body)
+        print(" \n")
+        print("Received data: ", received_data)
+        print("\n")
+
+        return JsonResponse({'status': 'Data received successfully'})
+    else:
+        return JsonResponse({'error': 'Invalid request method'})
+
 # Global variable to store received data
 global received_data
 received_data = None
@@ -99,7 +139,6 @@ def ir_post(request):
     else:
         return JsonResponse({'error': 'Invalid request method'})
         
-
 @csrf_exempt
 def ir_get(request):
     if request.method == 'POST':

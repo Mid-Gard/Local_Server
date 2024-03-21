@@ -228,6 +228,7 @@
     min-height: 100%;
     align-self: end;
     display: flex;
+    max-width: 30%;
     justify-content: center;
     align-items: center;
 }
@@ -253,3 +254,76 @@
     color: var(--secondary-primary-white);
     font-family: var(--font-roboto-flex);
 } */
+
+
+
+
+
+
+
+
+
+/* New css by chatGPT for the new code on top */
+
+.weatherReportCard {
+    background: linear-gradient(126.97deg, rgba(12, 47, 0, 0.74), rgba(0, 65, 57, 0.71));
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 34%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weathercardtitle {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.weatherParams {
+    display: flex;
+}
+
+.paramsColumn {
+    flex: 1 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-right: 20px;
+    min-height: 98%;
+    justify-content: space-between;
+}
+
+.paramTitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.paramvalues {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+.windSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.windSpeed,
+.windDirection {
+    margin-bottom: 10px;
+}
+
+.compass {
+    width: 12rem;
+    height: 12rem;
+    background-image: url("../../../public/compass.png");
+    background-size: cover;
+    transition: transform 0.5s ease;
+    /* Smooth transition for rotation */
+}

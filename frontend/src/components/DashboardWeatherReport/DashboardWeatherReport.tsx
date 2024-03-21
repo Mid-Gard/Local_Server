@@ -1,19 +1,8 @@
 "use client"
 import { FunctionComponent, useCallback, useState } from "react";
-import {
-    TextField,
-    InputAdornment,
-    Icon,
-    IconButton,
-    Button,
-} from "@mui/material";
 import styles from "./DashboardThirdFrame.module.css";
 
-interface cctvCamfeedProps {
-    camUrl: string;
-}
-
-function DashboardWeatherReport({ camUrl }: cctvCamfeedProps) {
+function DashboardWeatherReport() {
     const onViewAllClick = useCallback(() => {
         // Please sync "CCTV Tab" to the project
     }, []);

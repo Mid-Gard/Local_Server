@@ -87,6 +87,16 @@
   justify-content: flex-start;
 }
 
+.AGVrightSection {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* background-color: #f0f8ff80; */
+  min-height: 100vh;
+  justify-content: flex-start;
+  min-width: 60%;
+}
+
 .livestockFrameParent {
   display: flex;
   flex-direction: row;
@@ -171,11 +181,45 @@
 .otherparameterscard {
   position: relative;
   height: 50%;
+  padding-inline-start: 1rem;
   width: 100%;
-  /* background-color: #194911; */
 }
 
 .OtherParameters {
   width: 100%;
   height: 100%;
+}
+
+.cctvBody {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cctvAreacomp {
+  height: 92vh;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  min-height: 92vh;
+  justify-content: flex-start;
+}
+
+.InfoBox {
+  position: relative;
+  width: 100%;
+  height: 57%;
+}
+
+.cctvInfoBox {
+  height: 97%;
+  border-radius: 2rem;
 }
