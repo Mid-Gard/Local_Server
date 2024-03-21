@@ -31,7 +31,7 @@ const AGVmap: FunctionComponent = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            fetch("http://127.0.0.1:8000/livestock/location_dummy")
+            fetch("http://192.168.0.186:8000/livestock/location_dummy")
                 .then((response) => response.json())
                 .then((data) => setLocations(data));
         }, 1000);

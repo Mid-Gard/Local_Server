@@ -28,7 +28,7 @@ const WindGraph = () => {
 
     useEffect(() => {
         const fetchData = () => {
-            fetch('http://127.0.0.1:8000/weatherstation/weather_view/')
+            fetch('http://192.168.0.186:8000/weatherstation/weather_view/')
                 .then(response => response.json())
                 .then(data => {
                     const time = new Date();
@@ -56,7 +56,7 @@ const WindGraph = () => {
     }, []);
 
     return (
-        <div>
+        <div className={styles.WindGraphBody}>
             {/* <Plot
                 data={plotData}
                 layout={{ width: 1000, height: 240, title: 'Real-time Weather Data' }}
@@ -107,7 +107,7 @@ export default WindGraph;
 
 //     useEffect(() => {
 //         const fetchData = () => {
-//             fetch('http://127.0.0.1:8000/weatherstation/weather_view/')
+//             fetch('http://192.168.0.186:8000/weatherstation/weather_view/')
 //                 .then(response => response.json())
 //                 .then(data => {
 //                     const time = new Date();

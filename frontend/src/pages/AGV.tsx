@@ -26,7 +26,7 @@ const AGV: FunctionComponent = () => {
                             <AGVvideoFeed camUrl={camUrl} />
                             <AGVcontrols />
                         </div>
-                        <div className={styles.rightSection}>
+                        <div className={styles.AGVrightSection}>
                             <AGVmap />
                             <AGVparams />
                         </div>
