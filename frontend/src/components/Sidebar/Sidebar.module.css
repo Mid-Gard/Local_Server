@@ -26,11 +26,12 @@
 
 .farmManagementWrapper {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 0 var(--padding-9xl);
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-self: center;
 }
 
 .farmManagement {

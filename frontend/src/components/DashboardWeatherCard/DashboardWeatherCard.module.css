@@ -228,7 +228,7 @@
     min-height: 100%;
     align-self: end;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
