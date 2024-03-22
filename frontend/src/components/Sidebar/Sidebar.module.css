@@ -40,7 +40,9 @@
   line-height: 100%;
   background: linear-gradient(97.89deg, #fff, rgba(117, 122, 140, 0));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+  padding-block-start: 2rem;
+  font-size: 1.5rem;
   z-index: 1;
 }
 
@@ -59,7 +61,7 @@
 }
 
 .cattleBehaviorIcon {
-  align-self: stretch;
+  align-self: flex-end;
   height: 1px;
   position: relative;
   max-width: 100%;

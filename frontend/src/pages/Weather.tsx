@@ -33,7 +33,7 @@ const Weather: FunctionComponent = () => {
                                     className={styles.tempgraph}
                                     loading="eager"
                                     alt=""
-                                    src="/TemperatureHumidiy.png"
+                                    src="/WindSpeedGraph.png"
                                 />
                             </div>
                             <div className={styles.tempgraph}>
@@ -41,7 +41,7 @@ const Weather: FunctionComponent = () => {
                                     className={styles.tempgraph}
                                     loading="eager"
                                     alt=""
-                                    src="/TemperatureHumidiy.png"
+                                    src="/RainfallGraph.png"
                                 />
                             </div>
                         </div>
@@ -54,7 +54,9 @@ const Weather: FunctionComponent = () => {
                                     src="/OtherParameters.png"
                                 />
                             </div>
-                            <NotificationBox />
+                            <div className={styles.NotificationBoxInWeather}>
+                                <NotificationBox />
+                            </div>
                         </div>
                     </div>
                 </section>

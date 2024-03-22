@@ -45,7 +45,9 @@ function DashboardThirdFrame({ camUrl }: cctvCamfeedProps) {
           </div>
         </div>
       </div>
-      <NotificationBox />
+      <div className={styles.NotifcationBoxInDashboard}>
+        <NotificationBox />
+      </div>
     </div>
   );
 };

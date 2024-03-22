@@ -18,7 +18,7 @@ const DashboardWeatherCard: FunctionComponent = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://192.168.0.186:8000/weatherstation/weather_view/");
+                const response = await fetch("http://127.0.0.1:8000/weatherstation/weather_view/");
                 const data = await response.json();
                 setWeatherData(data.weather_data);
             } catch (error) {
@@ -28,7 +28,7 @@ const DashboardWeatherCard: FunctionComponent = () => {
 
         fetchData();
 
-        const interval = setInterval(fetchData, 100); // Fetch data every minute
+        const interval = setInterval(fetchData, 10000); // Fetch data every minute
         return () => clearInterval(interval); // Cleanup on unmount
     }, []);
 
@@ -63,7 +63,7 @@ const DashboardWeatherCard: FunctionComponent = () => {
         <div className={styles.weatherReportCard}>
             <div className={styles.header}>
                 <div className={styles.weathercardtitle}>Weather Report</div>
-                <button onClick={onViewAllClick}>See All</button>
+                <button className={styles.seeallbtn} onClick={onViewAllClick}>See All</button>
             </div>
             <div className={styles.weatherParams}>
                 {weatherData && (

@@ -25,11 +25,24 @@ const Livestock: FunctionComponent = () => {
                                 <LivestockMap />
                             </div>
                             <div className={styles.livestockgraph}>
-                                
+                                <img
+                                    className={styles.IndividualAnimalActivityGraph}
+                                    loading="eager"
+                                    alt=""
+                                    src="/IndividualAnimalActivityGraph.png"
+                                />
                             </div>
                         </div>
                         <div className={styles.livestockRightSection}>
-                            <div className={styles.notificationbox}>
+                            <div className={styles.livestockDetailsCard}>
+                                <img
+                                    className={styles.livestockDetailscardImage}
+                                    loading="eager"
+                                    alt=""
+                                    src="/livestockDetailsCard.png"
+                                />
+                            </div>
+                            <div className={styles.notificationboxInLivestock}>
                                 <NotificationBox />
                             </div>
                         </div>

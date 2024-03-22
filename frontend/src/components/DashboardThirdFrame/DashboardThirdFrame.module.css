@@ -116,8 +116,8 @@
   box-sizing: border-box;
   padding-block: 1rem;
   gap: var(--gap-base);
-  min-width: 60rem;
-  max-width: 54rem;
+  min-width: 45%;
+  max-width: 47%;
 }
 
 .background4 {
@@ -194,19 +194,13 @@
 }
 
 .NotificationBox {
-  /* width: 401px; */
-  width: 100%;
-  height: -webkit-fill-available;
-  filter: drop-shadow(0 3.5px 5.5px rgba(0, 0, 0, 0.02));
-  flex-direction: column;
-  align-items: center;
-  padding: var(--padding-2xs) var(--padding-base) var(--padding-103xl) var(--padding-smi);
-  box-sizing: border-box;
+  min-width: none;
+}
+
+.NotifcationBoxInDashboard {
+  max-width: 30%;
+  min-width: 23%;
   position: relative;
-  gap: var(--gap-12xl);
-  z-index: 3;
-  color: var(--color-silver);
-  font-family: var(--font-roboto-flex);
 }
 
 .DashboardThirdFrame {
