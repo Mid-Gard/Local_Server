@@ -30,16 +30,18 @@ const CCTV: FunctionComponent = () => {
                         <div className={styles.cctvAreacomp}>
                             <CCTVarea camUrls={camUrls} />
                         </div>
-                        <div className={styles.rightSection}>
-                            <div className={styles.InfoBox}>
+                        <div className={styles.cctvrightSection}>
+                            <div className={styles.cctvInfoBox}>
                                 <img
-                                    className={styles.cctvInfoBox}
+                                    className={styles.cctvInfoBoxImg}
                                     loading="eager"
                                     alt=""
                                     src="/cctvInfoBox.png"
                                 />
                             </div>
-                            <NotificationBox />
+                            <div className={styles.NotificationBoxInCCTV}>
+                                <NotificationBox />
+                            </div>
                         </div>
                     </div>
                 </section>

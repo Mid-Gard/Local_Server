@@ -267,7 +267,7 @@
 
 .weatherReportCard {
     background: linear-gradient(126.97deg, rgba(12, 47, 0, 0.74), rgba(0, 65, 57, 0.71));
-    border-radius: 10px;
+    border-radius: 1.5rem;
     padding: 1rem;
     min-width: 34%;
 }
@@ -283,6 +283,16 @@
     font-weight: 900;
 }
 
+.seeallbtn {
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    background-color: #6d6dff;
+    font-weight: 700;
+    color: aliceblue;
+}
+
 .weatherParams {
     display: flex;
 }
@@ -294,6 +304,7 @@
     flex-direction: column;
     margin-right: 20px;
     min-height: 98%;
+    padding-block-end: 1.5rem;
     justify-content: space-between;
 }
 

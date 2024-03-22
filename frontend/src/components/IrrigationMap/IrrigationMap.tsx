@@ -16,9 +16,12 @@ function IrrigationMap() {
 
     return (
         <div className={styles.background}>
-            <div className={styles.title}>
-                Irrigation Status
-            </div>
+            <img
+                className={styles.avghumiditygraphImg}
+                loading="eager"
+                alt=""
+                src="/AverageMoistureGraph.png"
+            />
         </div>
     );
 };

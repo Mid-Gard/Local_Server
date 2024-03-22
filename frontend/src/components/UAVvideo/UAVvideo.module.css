@@ -115,8 +115,10 @@
     padding: var(--padding-xl) var(--padding-5xl) var(--padding-3xl) var(--padding-mini);
     box-sizing: border-box;
     gap: var(--gap-base);
-    min-width: 52rem;
-    max-width: 54rem;
+    min-width: 65%;
+    min-height: 60%;
+    max-width: 70%;
+    max-height: 70%;
 }
 
 .background4 {
