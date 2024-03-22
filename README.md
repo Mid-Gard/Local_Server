@@ -1,3 +1,5 @@
+This is a checkpoint before the event.
+
 # How to run
 
 1. Go in the BackEnd folder : ```cd BackEnd```
