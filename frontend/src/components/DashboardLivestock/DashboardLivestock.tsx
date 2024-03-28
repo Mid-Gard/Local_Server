@@ -1,19 +1,35 @@
-import { FunctionComponent, useCallback, useState, useEffect } from "react";
-import { Button } from "@mui/material";
+import { FunctionComponent, useState, useEffect } from "react";
+import { LinearProgress } from "@mui/material";
 import styles from "./DashboardLivestock.module.css";
-
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 import LivestockMap from "../LivestockMap/LivestockMap";
 
 const SecondFrame: FunctionComponent = () => {
-    const onIconClick = useCallback(() => {
-        // Please sync "Report Tab" to the project
-    }, []);
+    const [data, setData] = useState<{
+        TotalDevices: number;
+        InFarm: number;
+        OutFarm: number;
+        OffDevices: number;
+    }>({
+        TotalDevices: 0,
+        InFarm: 0,
+        OutFarm: 0,
+        OffDevices: 0
+    });
 
-    const onIconContainerClick = useCallback(() => {
-        // Please sync "Report Tab" to the project
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://192.168.0.186:8000/livestock/loc_status');
+                const newData = await response.json();
+                setData(newData);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        const interval = setInterval(fetchData, 1000);
+
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -23,92 +39,98 @@ const SecondFrame: FunctionComponent = () => {
             </div>
             <div className={styles.cattleBehaviorWrapper}>
                 <div className={styles.cattleBehavior}>
-                    <div className={styles.cCTVFrame}>
-                        <h3 className={styles.cattleBehaviour}>Cattle Behaviour</h3>
+                    <div className={styles.TittleSection}>
+                        <div className={styles.HeadingSection}>
+                        <h3 className={styles.Heading}>Cattle Behaviour</h3>
+                            <h3 className={styles.Heading}>Total Cows : 300</h3>
+                        </div>
                         <div className={styles.thanLastWeekContainer}>
                             <span className={styles.span}>(+23)</span>
                             <span className={styles.thanLastWeek}> than last week</span>
                         </div>
                     </div>
-                    <div className={styles.onlineProgress}>
-                        <div className={styles.iconTotalOnline}>
+                    <div className={styles.ParameterSection}>
+                        <div className={styles.TotalOnline}>
                             <div className={styles.progressFrames}>
                                 <div className={styles.wrapperIcon}>
                                     <img
-                                        className={styles.icon3}
-                                        loading="eager"
-                                        alt=""
-                                        src="/icon-6.svg"
-                                    />
-                                </div>
-                                <div className={styles.totalOnline}>Total Online</div>
-                            </div>
-                            <div className={styles.pMFrames}>300</div>
-                            <img
-                                className={styles.progressIcon}
-                                loading="eager"
-                                alt=""
-                                src="/progress.svg"
-                            />
-                        </div>
-                        <div className={styles.iconTotalOnline1}>
-                            <div className={styles.wrapperIconParent}>
-                                <div className={styles.wrapperIcon1}>
-                                    <img
-                                        className={styles.icon4}
+                                        className={styles.icon}
                                         loading="eager"
                                         alt=""
                                         src="/icon-7.svg"
                                     />
+                                    <div className={styles.totalOnline}>Total Online</div>
                                 </div>
-                                <div className={styles.walking}>Walking</div>
                             </div>
-                            <div className={styles.div2}>24</div>
-                            <img
-                                className={styles.progressIcon1}
-                                loading="eager"
-                                alt=""
-                                src="/progress-1.svg"
-                            />
+                            <div className={styles.valueSection}>
+                                <div className={styles.value}>{data.TotalDevices}</div>
+                                <div className={styles.progressbar}>
+                                    <LinearProgress variant="determinate" value={(data.TotalDevices / 100) * 100} />
+                                </div>
+                            </div>
                         </div>
-                        <div className={styles.iconTotalOnline2}>
-                            <div className={styles.wrapperIconGroup}>
-                                <div className={styles.wrapperIcon2}>
+                        <div className={styles.InFarm}>
+                            <div className={styles.progressFrames}>
+                                <div className={styles.wrapperIcon}>
                                     <img
-                                        className={styles.icon5}
+                                        className={styles.icon}
                                         loading="eager"
                                         alt=""
-                                        src="/icon-8.svg"
+                                        src="/icon-7.svg"
                                     />
+                                    <div className={styles.totalOnline}>Total Online</div>
                                 </div>
-                                <div className={styles.idle}>Idle</div>
                             </div>
-                            <div className={styles.div3}>276</div>
-                            <img
-                                className={styles.progressIcon2}
-                                alt=""
-                                src="/progress-2.svg"
-                            />
+                            <div className={styles.valueSection}>
+                                <div className={styles.value}>
+                                    {data.InFarm}
+                                </div>
+                                <div className={styles.progressbar}>
+                                    <LinearProgress variant="determinate" value={(data.InFarm / 100) * 100} />
+                                </div>
+                            </div>
                         </div>
-                        <div className={styles.cattleBehavior1}>
-                            <div className={styles.onlineOffline}>
-                                <div className={styles.icon6}>
-                                    <div className={styles.iconChild} />
+                        <div className={styles.OutFarm}>
+                            <div className={styles.progressFrames}>
+                                <div className={styles.wrapperIcon}>
                                     <img
-                                        className={styles.ioniconbbuilddefault}
+                                        className={styles.icon}
                                         loading="eager"
                                         alt=""
-                                        src="/ioniconbbuilddefault-1.svg"
+                                        src="/icon-7.svg"
                                     />
+                                    <div className={styles.totalOnline}>Total Online</div>
                                 </div>
-                                <div className={styles.offline}>Offline</div>
                             </div>
-                            <div className={styles.label}>320</div>
-                            <img
-                                className={styles.progressIcon3}
-                                alt=""
-                                src="/progress-3.svg"
-                            />
+                            <div className={styles.valueSection}>
+                                <div className={styles.value}>
+                                    {data.OutFarm}
+                                </div>
+                                <div className={styles.progressbar}>
+                                    <LinearProgress variant="determinate" value={(data.OutFarm / 100) * 100} />
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.OffDevices}>
+                            <div className={styles.progressFrames}>
+                                <div className={styles.wrapperIcon}>
+                                    <img
+                                        className={styles.icon}
+                                        loading="eager"
+                                        alt=""
+                                        src="/icon-7.svg"
+                                    />
+                                    <div className={styles.totalOnline}>Total Online</div>
+                                </div>
+                            </div>
+                            <div className={styles.valueSection}>
+                                <div className={styles.value}>
+                                    {data.OffDevices}
+                                </div>
+                                <div className={styles.progressbar}>
+                                    <LinearProgress variant="determinate" value={(data.OffDevices / 100) * 100} />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

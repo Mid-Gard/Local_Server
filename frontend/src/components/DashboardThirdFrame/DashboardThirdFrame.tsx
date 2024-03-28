@@ -40,7 +40,7 @@ function DashboardThirdFrame({ camUrl }: cctvCamfeedProps) {
               <img id="browser_video" className={styles.video_image} alt="video" src={camUrl} />
             </div>
             <div className={styles.background3} >
-              <img id="browser_video" className={styles.video_image} alt="video" src={camUrl} />
+              <img id="browser_video" className={styles.video_image} alt="video" src='http://192.168.0.133:5000/video_feed' />
             </div>
           </div>
         </div>

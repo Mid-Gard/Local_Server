@@ -64,7 +64,7 @@ function AGVcontrols() {
     }, []);
 
     const sendRequest = (endpoint: string) => {
-        fetch(`http://192.168.0.108:5000/${endpoint}`, { method: 'GET' })
+        fetch(`http://192.168.0.106:5000/${endpoint}`, { method: 'GET' })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

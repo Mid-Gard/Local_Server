@@ -28,7 +28,8 @@
 
 .livestockmap {
     height: 35vh;
-    min-width: 100%;;
+    min-width: 100%;
+    ;
 }
 
 @media screen and (max-width: 1325px) {
@@ -77,7 +78,7 @@
     max-width: 100%;
 }
 
-.cCTVFrame {
+.TittleSection {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -85,7 +86,7 @@
     gap: var(--gap-9xs);
 }
 
-.cattleBehaviour {
+.Heading {
     margin: 0;
     height: 16.7px;
     position: relative;
@@ -119,32 +120,38 @@
 }
 
 .cattleBehavior1,
-.onlineProgress {
+.ParameterSection {
     display: flex;
     align-items: flex-start;
 }
 
-.onlineProgress {
+.ParameterSection {
     align-self: stretch;
     flex-direction: row;
     justify-content: space-between;
-    gap: var(--gap-xl);
+    gap: 1rem;
     font-size: var(--font-size-sm);
     color: var(--gray-gray-400);
     font-family: var(--font-roboto-flex);
 }
 
-.onlineProgress {
+.TotalOnline {
+    width: 25%;
+}
+
+.ParameterSection {
     flex-wrap: wrap;
 }
 
 .progressFrames {
     display: flex;
     flex-direction: row;
+    width: 100%;
     align-items: flex-end;
     justify-content: flex-start;
     padding: 0 var(--padding-12xs) 0 0;
     gap: var(--gap-2xs);
+    position: relative;
 }
 
 .walking,
@@ -174,6 +181,26 @@
     gap: var(--gap-4xs);
 }
 
+.HeadingSection {
+    display: flex;
+}
+
+.valueSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.value {
+    font-size: 1.4rem;
+}
+
+.progressbar {
+    width: 100%;
+    position: relative;
+}
+
 .icon3 {
     align-self: stretch;
     width: 100%;
@@ -192,6 +219,9 @@
 .wrapperIcon {
     position: relative;
     z-index: 4;
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
 .totalOnline {
@@ -325,7 +355,7 @@
 }
 
 .cattleBehavior1,
-.onlineProgress {
+.ParameterSection {
     display: flex;
     align-items: flex-start;
 }

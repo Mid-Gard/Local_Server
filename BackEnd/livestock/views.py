@@ -52,6 +52,52 @@ def liveStock_get(request):
         return JsonResponse({'error': 'Invalid request method'})
 
 
+@csrf_exempt
+def liveStock_view(request):
+    try:
+        # Retrieve the latest data from the database
+        latest_data = LivestockData.objects.latest('timestamp')
+        
+        # Create a dictionary with the latest data
+        livestock_data = {
+            'timestamp': latest_data.timestamp,
+            'x': latest_data.x,
+            'y': latest_data.y,
+            'z': latest_data.z,
+            'lat': latest_data.lat,
+            'long': latest_data.long
+        }
+
+        # Return the latest data as a JSON response
+        return JsonResponse({'livestock_data': livestock_data})
+    except LivestockData.DoesNotExist:
+        return JsonResponse({'error': 'No data available'})
+
+
+import random
+from django.http import JsonResponse
+
+def loc_status(request):
+    # Generate random values for TotalDevices, InFarm, OutFarm, OffDevices
+    total_devices = random.randint(50, 100)
+    in_farm = random.randint(10, total_devices)
+    out_farm = total_devices - in_farm
+    off_devices = random.randint(0, total_devices - in_farm)
+
+    # Prepare response data
+    data = {
+        'TotalDevices': total_devices,
+        'InFarm': in_farm,
+        'OutFarm': out_farm,
+        'OffDevices': off_devices
+    }
+
+    # Return JSON response
+    return JsonResponse(data)
+
+
+
+
 
 # @csrf_exempt
 # def liveStock_get(request):
@@ -100,26 +146,7 @@ def liveStock_get(request):
 #         return JsonResponse({'error': 'Invalid request method'})
     
 
-@csrf_exempt
-def liveStock_view(request):
-    try:
-        # Retrieve the latest data from the database
-        latest_data = LivestockData.objects.latest('timestamp')
-        
-        # Create a dictionary with the latest data
-        livestock_data = {
-            'timestamp': latest_data.timestamp,
-            'x': latest_data.x,
-            'y': latest_data.y,
-            'z': latest_data.z,
-            'lat': latest_data.lat,
-            'long': latest_data.long
-        }
 
-        # Return the latest data as a JSON response
-        return JsonResponse({'livestock_data': livestock_data})
-    except LivestockData.DoesNotExist:
-        return JsonResponse({'error': 'No data available'})
 
 
 @csrf_exempt

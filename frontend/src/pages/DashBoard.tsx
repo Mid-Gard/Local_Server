@@ -9,7 +9,7 @@ import TopBar from "../components/TopBar/TopBar";
 
 const DashBoard: FunctionComponent = () => {
 
-  const camUrl = 'http://192.168.137.182:8080/video';
+  const camUrl = 'http://192.168.0.106:5000/video';
   return (
     <div className={styles.dashboard}>
       <main className={styles.background}>

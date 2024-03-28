@@ -43,19 +43,19 @@ def notification_post(request):
 
 
 
+from django.core import serializers
+
 @csrf_exempt
 def notification_get(request):
     if request.method == 'GET':
-        latest_notification = notificationData.objects.order_by('-timestamp').first()
-        # print("---------------- The Device from which message come is : ", latest_notification.Device)
-        if latest_notification:
-            notification_data = {
-                'timestamp': latest_notification.timestamp,
-                'Notification': latest_notification.Notification,
-                'Priority': latest_notification.Priority,
-                'Device': latest_notification.Device
-            }
-            return JsonResponse(notification_data)
+        latest_notifications = notificationData.objects.order_by('-timestamp')[:5]  # Get the latest 5 rows
+        if latest_notifications:
+            # Extract timestamp and notification fields from each notification
+            notification_data = [
+                {"timestamp": notification.timestamp, "Notification": notification.Notification}
+                for notification in latest_notifications
+            ]
+            return JsonResponse(notification_data, safe=False)
         else:
             return JsonResponse({'error': 'No notification available'})
     else:

@@ -1,11 +1,11 @@
 .background {
     border-radius: var(--br-xl);
+    -webkit-backdrop-filter: blur(120px);
     backdrop-filter: blur(120px);
     max-width: 100%;
     max-height: 100%;
     z-index: 3;
-    min-height: 42vh;
-    margin-top: 1rem;
+    min-height: 21%;
 }
 
 .background {
@@ -13,7 +13,13 @@
 }
 
 .title {
-    font-size: x-large;
-    color: aliceblue;
-    padding: 2rem;
+    text-align: center;
+    font-size: 24px;
+    color: var(--secondary-primary-white);
+    font-family: var(--font-aldrich);
+    border-radius: var(--br-xl);
+    background: linear-gradient(126.97deg,
+            rgba(0, 65, 57, 0.74),
+            rgba(12, 47, 0, 0.5));
+    backdrop-filter: blur(120px);
 }

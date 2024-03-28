@@ -1,3 +1,7 @@
+
+// Simple Image Code
+
+
 import React, { useState, useEffect } from 'react';
 // import Plot from 'react-plotly.js';
 // import Plotly from 'plotly.js'; // Import Plotly from plotly.js
@@ -28,7 +32,7 @@ const WindGraph = () => {
 
     useEffect(() => {
         const fetchData = () => {
-            fetch('http://127.0.0.1:8000/weatherstation/weather_view/')
+            fetch('http://192.168.0.186:8000/weatherstation/weather_view/')
                 .then(response => response.json())
                 .then(data => {
                     const time = new Date();
@@ -107,7 +111,7 @@ export default WindGraph;
 
 //     useEffect(() => {
 //         const fetchData = () => {
-//             fetch('http://127.0.0.1:8000/weatherstation/weather_view/')
+//             fetch('http://192.168.0.186:8000/weatherstation/weather_view/')
 //                 .then(response => response.json())
 //                 .then(data => {
 //                     const time = new Date();

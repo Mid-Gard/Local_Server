@@ -1,0 +1,252 @@
+.frameChild {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background: linear-gradient(126.97deg,
+      rgba(0, 65, 57, 0.74),
+      rgba(12, 47, 0, 0.5));
+  backdrop-filter: blur(120px);
+}
+
+.controlPanel {
+  line-height: 150%;
+}
+
+.fastbtn,
+.midbtn,
+.slowbtn {
+  margin-block: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  height: 5rem;
+  width: 14rem;
+  background-color: #2d313d;
+}
+
+.stopBtn {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 6rem;
+  font-size: 2rem;
+  background-color: #360e0e;
+}
+
+
+.speedcontrolbtns {
+  /* width: 162px; */
+  display: flex;
+  /* height: 332px; */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.directioncontrolbtnsChild {
+  top: 0;
+  left: 0;
+  border-radius: 56px;
+  background: linear-gradient(126.97deg, #3d3f4c, #2d313d);
+  backdrop-filter: blur(120px);
+  width: 351.3px;
+  height: 352.2px;
+}
+
+.topsectionChild {
+  width: 4rem;
+  position: relative;
+  border-radius: var(--br-7xs);
+  height: 4rem;
+  object-fit: contain;
+}
+
+.topsectionInner,
+.topsectionItem {
+  width: 7rem;
+  position: relative;
+  border-radius: var(--br-7xs);
+  height: 7rem;
+  margin-inline: 3rem;
+}
+
+.MiddlesectionItem {
+  width: 7rem;
+  position: relative;
+  border-radius: var(--br-7xs);
+  height: 7rem;
+  margin-block: 3rem;
+}
+
+.topsectionInner {
+  width: 68.5px;
+  height: 68.5px;
+  object-fit: contain;
+}
+
+.topsection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-34xl);
+}
+
+.middlesectionChild,
+.middlesectionItem {
+  width: 42.4px;
+  position: relative;
+  border-radius: var(--br-7xs);
+  height: 54.4px;
+  object-fit: contain;
+}
+
+.middlesection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.bottomsectionChild {
+  width: 68.5px;
+  position: relative;
+  border-radius: var(--br-7xs);
+  height: 68.5px;
+  object-fit: contain;
+}
+
+.bottomsectionInner,
+.bottomsectionItem {
+  width: 54.4px;
+  position: relative;
+  border-radius: var(--br-7xs);
+  height: 42.4px;
+}
+
+.bottomsectionInner {
+  width: 68.5px;
+  height: 68.5px;
+  object-fit: contain;
+}
+
+.bottomsection,
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-34xl);
+}
+
+.buttons {
+  top: 19.4px;
+  left: 23.1px;
+  flex-direction: column;
+  gap: var(--gap-7xl);
+}
+
+.directioncontrolbtns {
+  /* width: 351.3px; */
+  position: relative;
+  padding: 1rem;
+  /* height: 352.2px; */
+  border-radius: 56px;
+  background: linear-gradient(126.97deg, #3d3f4c, #2d313d);
+  -webkit-backdrop-filter: blur(120px);
+  backdrop-filter: blur(120px);
+}
+
+.allcarbtns,
+.maincontent {
+  display: flex;
+  align-items: center;
+}
+
+.allcarbtns {
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.maincontent {
+  height: 91.94%;
+  top: 4.17%;
+  bottom: 3.89%;
+  left: calc(50% - 298px);
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-4xs);
+  padding-block: 1rem;
+}
+
+.rectangleParent {
+  top: 0;
+  left: 0;
+  width: 670px;
+  height: 432px;
+}
+
+.controlpanel {
+  text-align: center;
+  font-size: 24px;
+  color: var(--secondary-primary-white);
+  font-family: var(--font-aldrich);
+  border-radius: var(--br-xl);
+  background: linear-gradient(126.97deg,
+      rgba(0, 65, 57, 0.74),
+      rgba(12, 47, 0, 0.5));
+  backdrop-filter: blur(120px);
+}
+
+.forwardbtn {
+  /* background-size: 60%; */
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  /* width: 11rem; */
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backwardbtn {
+  /* background-size: 60%; */
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  /* width: 11rem; */
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightdbtn {
+  /* background-size: 60%; */
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  /* width: 11rem; */
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftbtn {
+  /* background-size: 60%; */
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  /* width: 11rem; */
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

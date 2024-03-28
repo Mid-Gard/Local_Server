@@ -7,10 +7,11 @@ import AGVvideoFeed from "../components/AGVvideoFeed/AGVvideoFeed";
 import AGVmap from "../components/AGVmap/AGVmap";
 import AGVparams from "../components/AGVparams/AGVparams";
 import AGVcontrols from "../components/AGVcontrols/AGVcontrols";
+import AGVControlPanel from "../components/AGVControlPanel/AGVControlPanel";
 
 const AGV: FunctionComponent = () => {
 
-    const camUrl = 'http://192.168.0.108:5000/video';
+    const camUrl = 'http://192.168.0.106:5000/video';
     return (
         <div className={styles.dashboard}>
             <main className={styles.background}>
@@ -24,11 +25,12 @@ const AGV: FunctionComponent = () => {
                     <div className={styles.AGVHomeContent}>
                         <div className={styles.leftSection}>
                             <AGVvideoFeed camUrl={camUrl} />
-                            <AGVcontrols />
+                            <AGVparams />
                         </div>
                         <div className={styles.AGVrightSection}>
                             <AGVmap />
-                            <AGVparams />
+                            {/* <AGVcontrols /> */}
+                            <AGVControlPanel />
                         </div>
                     </div>
                 </section>

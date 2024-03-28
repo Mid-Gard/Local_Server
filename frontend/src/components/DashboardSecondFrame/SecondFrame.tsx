@@ -42,7 +42,7 @@ const SecondFrame: FunctionComponent = () => {
             <div className={styles.textbox}>
               <div className={styles.welcomeback}>
                 <div className={styles.cardtext}>Welcome back,</div>
-                <h1 className={styles.username}>Mark Johnson</h1>
+                <h1 className={styles.username}>Sakharam Patil</h1>
                 <div className={styles.cardtext}>Analyze the past data and reports.</div>
               </div>
             </div>
@@ -66,7 +66,6 @@ const SecondFrame: FunctionComponent = () => {
           <DashboardWeatherForecast />
         </div>
         <WindGraph />
-
       </div>
       <div className={styles.framesecondcard}>
         <DashboardLivetock />

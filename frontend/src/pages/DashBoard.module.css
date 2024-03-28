@@ -69,6 +69,7 @@
   flex-direction: row;
   width: -webkit-fill-available;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .leftSection {
@@ -76,6 +77,7 @@
   flex-direction: column;
   max-width: 68%;
   min-width: 60%;
+  gap: 1rem;
 }
 
 .rightSection {
@@ -94,6 +96,7 @@
   min-height: 100vh;
   justify-content: flex-start;
   min-width: 40%;
+  gap: 1rem;
 }
 
 

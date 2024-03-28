@@ -8,9 +8,9 @@ import CCTVarea from "../components/CCTVarea/CCTVarea";
 
 const CCTV: FunctionComponent = () => {
     const camUrls = [
-        'http://192.168.0.182:8080/video',
+        'http://192.168.0.106:5000/video',
         'http://192.168.0.133:5000/video_feed',
-        'http://192.168.0.176:8080/video',
+        'http://192.168.0.121:8080/video',
         'http://192.168.0.121:8080/video',
         'http://192.168.0.197:8080/video',
         'http://192.168.0.162:8080/video',
